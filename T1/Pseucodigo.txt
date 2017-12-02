@@ -1,0 +1,429 @@
+﻿PROGRAMA: areaTriangulo
+
+ENTORNO:
+	baase ES REAL
+	altura ES REAL
+	baase <- 0
+	altura <- 0
+
+ALGORITMO:
+	ESCRIBIR "Programa que calcula el área de un triángulo"
+	ESCRIBIR "Dime la base:"
+	LEER baase
+	ESCRIBIR "Dime la altura:"
+	LEER altura
+	ESCRIBIR "El área del triángulo es: " (baase * altura)/2
+
+FIN: areaTriangulo
+
+PROGRAMA: mayorQue
+
+ENTORNO:
+	X <- 0 ES REAL
+	Y <- 0 ES REAL
+	
+ALGORITMO:
+	ESCRIBIR "Programa que dice si el primer numero es mayor que el segundo."
+	ESCRIBIR "Dime el primer numero:"
+	LEER X
+	ESCRIBIR "Dime el segundo numero:"
+	LEER Y
+	SI X > Y
+		ESCRIBIR "VERDADERO"
+	SINO
+		ESCRIBIR "FALSO"
+	FINSI
+	
+FIN: mayorQue
+
+PROGRAMA: comparaNum
+
+ENTORNO:
+	X <- 0 ES REAL
+	Y <- 0 ES REAL
+	
+ALGORITMO:
+	ESCRIBIR "Programa que dice si el primer número es mayor, igual o menor que el segundo"
+	ESCRIBIR "Dime el primer numero:"
+	LEER X
+	ESCRIBIR "Dime el segundo numero:"
+	LEER Y
+	SI X>Y
+		ESCRIBIR X " es mayor que "Y
+	SINO SI X<Y
+			ESCRIBIR X " es menor que "Y
+		SINO
+			ESCRIBIR X " es igual que "Y
+		FINSI
+	FINSI
+	
+FIN: comparaNum
+
+PROGRAMA: nCaracteres
+
+ENTORNO:
+	letra <- ' ' ES CARACTER
+	a <- 0 ES ENTERO
+	e <- 0 ES ENTERO
+	i <- 0 ES ENTERO
+	o <- 0 ES ENTERO
+	u <- 0 ES ENTERO
+	contador <- 0 ES ENTERO
+	total <- 0 ES ENTERO
+	
+ALGORITMO:
+	ESCRIBIR "Programa que lee por teclado N caracteres y contabilice el número total de cada vocal"
+	ESCRIBIR "Dime el total de caracteres que vas a introducir"
+	LEER total
+	MIENTRAS contador < total HACER
+		ESCRIBIR "Escribe un caracter"
+		LEER caracter
+		CASO (caracter)
+			CASO 'a':
+				a <- a + 1
+			CASO 'e':
+				e <- e + 1
+			CASO 'i':
+				i <- i + 1
+			CASO 'o':
+				o <- o + 1
+			CASO 'u':
+				u <- u + 1
+		FINCASO
+	FINMIENTRAS
+	ESCRIBIR "Se introdujeron " a " letras a, "e" letras e, "i" letras i, "o" letras o, "u" letras u"
+	
+FIN: nCaracteres
+
+PROGRAMA: conversorMillas
+
+ENTORNO:
+	total <- 0 ES REAL
+
+ALGORITMO:
+	ESCRIBIR "Programa que convierte las millas marinas en metros. 1 milla marina equivale a 1.852 metros."
+	ESCRIBIR "Dime cuantos metros hay que convertir"
+	LEER total
+	ESCRIBIR total "metros son " total*1852 " millas."
+	
+FIN: conversorMillas
+
+PROGRAMA: numLetras
+ENTORNO:
+	numero ES ENTERO
+
+ALGORITMO:
+	ESCRIBIR "Programa que muestra el valor en letras de un numero dado del 1 al 9"
+	ESCRIBIR "Dime el número: "
+	LEER numero
+	CASO (numero)
+		CASO 1:
+			ESCRIBIR "uno"
+		CASO 2:
+			ESCRIBIR "dos"
+		CASO 3:
+			ESCRIBIR "tres"
+		CASO 4:
+			ESCRIBIR "cuatro"
+		CASO 5:
+			ESCRIBIR "cinco"
+		CASO 6:
+			ESCRIBIR "seis"
+		CASO 7:
+			ESCRIBIR "siete"
+		CASO 8:
+			ESCRIBIR "ocho"
+		CASO 9:
+			ESCRIBIR "nueve"
+		DEFECTO:
+	FINCASO
+	
+FIN:numLetras
+
+PROGRAMA: numRomano
+ENTORNO:
+	num <- 0 es ENTERO
+	MAX <- 20 es CONSTANTE ENTERO
+
+ALGORITMO:
+
+	SI(num < 0 O num > 19)
+		ESCRIBIR "Número no válido."
+	SINO
+		MIENTRAS (num > 0) HACER
+			SI (num >= 10)
+				ESCRIBIR "X"
+				num <- num - 10
+			FINSI
+			SI (num == 9)
+				ESCRIBIR "IX"
+				num <- num - 9
+			FINSI
+			SI (num >=5)
+				ESCRIBIR "V"
+				num <- num - 5
+			FINSI
+			SI (num == 4)
+				ESCRIBIR "IV"
+				num <- num - 4
+			FINSI
+			SI (num >= 1)
+				ESCRIBIR "I"
+				num <- num - 1
+			FINSI
+		FINMIENTRAS
+	FINSI
+	
+FIN: numRomano
+
+PROGRAMA: SumPArImp
+ENTORNO:
+    num es ENTERO
+    sumPar <- 0 es ENTERO
+    sumImp <- 0 es ENTERO
+
+ALGORITMO:
+    ESCRIBIR "Programa que muestra la suma de los numeros pares e impares separados. Finaliza al poner 0."
+    MIENTRAS (num <> 0) HACER
+        ESCRIBIR "Dime el número: "
+        LEER num
+        SI (num % 2 == 0)
+            sumPar <- sumPar + num
+        SINO
+            sumImp <- sumImp + num
+        FINSI
+    FINMIENTRAS
+    ESCRIBIR "La suma de los pares introducidos es: " sumPar
+    ESCRIBIR "La suma de los impares introducidos es: " sumImp
+
+FIN: SumPArImp
+
+PROGRAMA: asteriscos
+
+ENTORNO:
+    total <- 0 es ENTERO
+
+ALGORITMO:
+    ESCRIBIR "Programa que muestra una lineas de asteriscos dado un número entre 1 y 79"
+    ESCRIBIR "Dime el número: "
+    LEER total
+    SI (total >= 0 O total <= 79)
+        PARA (i<-0, i <= total, i <- i + 1)
+            ESCRIBIR "*"
+        FINPARA
+    FINSI
+    
+FIN: asteriscos 
+
+PROGRAMA: media
+ENTORNO:
+	num es ENTERO
+	contador <- 0 es ENTERO
+	total <- 0 es ENTERO
+
+ALGORITMO:
+	ESCRIBIR "Programa que calcula la media de numeros introducidos. Con 0 se sale"
+	MIENTRAS (num <> 0)
+		ESCRIBIR "Dime el número"
+		LEER num
+		total <- total + num
+		SI(num <> 0)
+			contador <- contador + 1
+	FINMIENTRAS
+	ESCRIBIR "La media es" total/contador
+
+FIN: media
+
+PROGRAMA: salarios
+ENTORNO:
+	tipo <- ' ' es CARACTER
+	MAXHORAS <- 40 es CONSTANTE ENTERO
+	PRECIOTIPO_A <- 6 es ENTERO
+	PRECIOTIPO_B <- 7 es ENTERO
+	PRECIOTIPO_C <- 8 es ENTERO
+	PRECIOEXTRATIPO_A <- 9 es ENTERO
+	PRECIOEXTRATIPO_B <- 9.5 es REAL
+	PRECIOEXTRATIPO_C <- 10 es ENTERO
+	totalHoras <- es REAL
+	nombre <- "" es STRING
+	
+ALGORITMO:
+	ESCRIBIR "Programa que calcula los salarios de tres tipos de empleados, sabiendo que el cálculo del salario depende del número de horas trabajadas, en base al tipo de empleado."
+	ESCRIBIR "Dime el nombre del empleado: "
+	LEER nombre
+	ESCRIBIR "Dime el tipo de trabajador de : " nombre
+	LEER tipo
+	MIENTRAS (tipo <> 'A' || tipo <> 'B' || tipo <> 'C')
+		ESCRIBIR: "Valor incorrecto, introduzca A, B o C."
+		ESCRIBIR: "Dime el tipo de empleado de: " nombre
+		LEER tipo
+	FINMIENTRAS
+	ESCRIBIR "Dime el total de horas: "
+	LEER totalHoras
+	MIENTRAS (totalHoras < 0)
+		ESCRIBIR "No se admiten valores negativos para las horas."
+		ESCRIBIR "Dime el total de horas: "
+		LEER totalHoras
+	FINMIENTRAS
+	ESCRIBIR "Datos del trabajador " nombre
+	CASO (tipo)
+		CASO 'A':
+			SI (totalHoras < MAXHORAS)
+				ESCRIBIR "El sueldo del trabajador de tipo A es : " totalHoras " horas * " PRECIOTIPO_A " Euros"
+				ESCRIBIR "En total serian : " totalHoras * PRECIOTIPO_A
+			SINO
+				ESCRIBIR "El sueldo del trabajador de tipo A es : " totalHoras - MAXHORAS " horas extra * " PRECIOEXTRATIPO_A " Euros + " MAXHORAS " horas * " PRECIOTIPO_A " Euros"
+				ESCRIBIR "En total serian : " (totalHoras - MAXHORAS) * PRECIOEXTRATIPO_A + totalHoras * PRECIOTIPO_A
+	CASO (tipo)
+		CASO 'B':
+			SI (totalHoras < MAXHORAS)
+				ESCRIBIR "El sueldo del trabajador de tipo B es : " totalHoras " horas * " PRECIOTIPO_B " Euros"
+				ESCRIBIR "En total serian : " totalHoras * PRECIOTIPO_B
+			SINO
+				ESCRIBIR "El sueldo del trabajador de tipo A es : " totalHoras - MAXHORAS " horas extra * " PRECIOEXTRATIPO_B " Euros + " MAXHORAS " horas * " PRECIOTIPO_B " Euros"
+				ESCRIBIR "En total serian : " (totalHoras - MAXHORAS) * PRECIOEXTRATIPO_B + totalHoras * PRECIOTIPO_B
+	CASO (tipo)
+		CASO 'C':
+			SI (totalHoras < MAXHORAS)
+				ESCRIBIR "El sueldo del trabajador de tipo C es : " totalHoras " horas * " PRECIOTIPO_C " Euros"
+				ESCRIBIR "En total serian : " totalHoras * PRECIOTIPO_C
+			SINO
+				ESCRIBIR "El sueldo del trabajador de tipo C es : " totalHoras - MAXHORAS " horas extra * " PRECIOEXTRATIPO_C " Euros + " MAXHORAS " horas * " PRECIOTIPO_C " Euros"
+				ESCRIBIR "En total serian : " (totalHoras - MAXHORAS) * PRECIOEXTRATIPO_C + totalHoras * PRECIOTIPO_C
+				
+FIN: salarios
+
+PROGRAMA: numerosPrimos
+
+ENTORNO:
+	MAXPRIMOS <- 25 es ENTERO
+	contador <- 0 es ENTERO
+	
+ALGORITMO:
+	ESCRIBIR "Programa que calcula los 25 primeros numeros primos."
+	PARA(i <- 2, i < (MAXPRIMOS + 1), i <- i + 1)
+	
+FIN:
+
+PROGRAMA: sumaHastaN
+ENTORNO:
+	MAXSUMA <- 100 es ENTERO
+	total <-0 es ENTERO
+	
+ALGORITMO:
+	ESCRIBIR "Programa que suma los " MAXSUMA " primeros numeros."
+	PARA (i <- 1, i <= MAXSUMA, i <- i + 1)
+		total <- total + i
+	FINPARA
+	ESCRIBIR "La suma de los " MAXSUMA " primeros números es : " total
+	
+FIN: sumaHastaN
+
+PROGRAMA: pagaNeta
+ENTORNO:
+	tasaImpuestos <- 0 es REAL
+	tarifaHoraria <- 0 es REAL
+	horas <- 0 es REAL
+	
+ALGORITMO:
+	ESCRIBIR "Programa que calcula la paga neta y visualiza la paga bruta, impuestos y paga neta de un trabajador conociendo el número de horas trabajadas, la tarifa horaria y la tasa de impuestos."
+	ESCRIBIR "Introduce el total de horas: "
+	LEER horas
+	ESCRIBIR "Introduce la tasa de impuestos: "
+	LEER tasaImpuestos
+	ESCRIBIR "Introduce la tarifa horaria: "
+	LEER tarifaHoraria
+	SI (horas < 0 O tasaImpuestos < 0 O tarifaHoraria < 0)
+		ESCRIBIR "Uno de los valores no es válido.
+	SINO
+		ESCRIBIR "La paga bruta del trabajador es :" horas * tarifaHoraria
+		ESCRIBIR "Los impuestos del trabajador son : " horas * tarifaHoraria * tasaImpuestos
+		ESCRIBIR "La paga neta del trabajador es: " (horas * tarifaHoraria) - (horas * tarifaHoraria * tasaImpuestos)
+	
+FIN: pagaNeta
+
+PROGRAMA: mediaPositivos
+ENTORNO:
+	num <- 0 es REAL
+	contador <- 0 es ENTERO
+	total <- 0 es ENTERO
+	
+ALGORITMO:
+	ESCRIBIR "Programa que calcula la media de los numeros positivos introducidos por teclado. Introduce 0 para finalizar el programa."
+	HACER
+		ESCRIBIR "Dime el número: "
+		LEER num
+		SI (num > 0)
+			contador <- contador + 1
+			total <- total + num
+		FINSI
+	MIENTRAS (num <> 0)
+	FINMIENTRAS
+	
+FIN: media
+
+PROGRAMA: salarioMensual
+ENTORNO:
+	MAXHORAS <- 40 es ENTERO
+	horas <- 0 es REAL
+	precioHora <- 0 es REAL
+	PRECIOHORAEXTRA <- 1.5 es REAL
+	
+ALGORITMO:
+	ESCRIBIR "Programa que calcula el salario mensual en base a las horas y el precio de las mismas."
+	ESCRIBIR "Introduce el total de horas: "
+	LEER horas
+	ESCRIBIR "Introduce el precio de la hora."
+	SI (horas < 0 O precioHora < 0)
+		ESCRIBIR "Uno de los valores no es válido."
+	SINO
+		SI(horas < MAXHORAS)
+			ESCRIBIR "El salario del trabajador es : " horas * precioHora
+		SINO
+			ESCRIBIR "El salario del trabajador es : " (horas - MAXHORAS) * (precioHora * PRECIOHORAEXTRA) + MAXHORAS * precioHora
+			
+FIN: salarioMensual
+
+PROGRAMA: compara3Num
+ENTORNO:
+	primerNumero <- 0 es REAL
+	segundoNumero <- 0 es REAL
+	tercerNumero <- 0 es REAL
+	
+ALGORITMO:
+	ESCRIBIR "Programa que dado tres números, determina si la suma de dos de ellos es igual al tercer número. Si cumple la condición, escribe “IGUALES” y, en caso contrario escribe “DISTINTOS”".
+	ESCRIBIR "Escribe el primer número: "
+	LEER primerNumero
+	ESCRIBIR "Escribe el segundo número: "
+	LEER segundoNumero
+	ESCRIBIR "Escribe el tercer número: "
+	LEER tercerNumero
+	SI (primerNumero + segundoNumero == tercerNumero)
+		ESCRIBIR primerNumero " + " segundoNumero " = " tercerNumero
+		ESCRIBIR "IGUALES"
+	SINO
+		SI (segundoNumero + tercerNumero == primerNumero)
+			ESCRIBIR segundoNumero " + " tercerNumero " = " primerNumero
+			ESCRIBIR "IGUALES"
+		SINO
+			SI (tercerNumero + primerNumero == segundoNumero)
+				ESCRIBIR tercerNumero " + " primerNumero " = " segundoNumero
+				ESCRIBIR "IGUALES"
+			SINO
+				ESCRIBIR "DISTINTOS"
+			FINSI
+		FINSI
+	FINSI
+ 
+FIN: compara3Num
+
+PROGRAMA: 
+ENTORNO:
+ALGORITMO:
+FIN:
+
+PROGRAMA: 
+ENTORNO:
+ALGORITMO:
+FIN:
+
