@@ -73,7 +73,6 @@ namespace Ejer9
         static void Main(string[] args)
         {
             ConsoleKeyInfo tecla;
-            bool flag = true;
             string aux = string.Empty;
             int[] auxArray;
             uint auxUInt = 0;
@@ -108,21 +107,51 @@ namespace Ejer9
                     case ConsoleKey.D3: case ConsoleKey.NumPad3:
                         Console.WriteLine("BUSCAR PERSONAS");
                         Console.WriteLine("=================================");
-                        Console.WriteLine("1. Por ID.");
-                        Console.WriteLine("2. Por Nombre");
+                        Console.WriteLine("Indica que persona quieres buscar: ");
+                        Console.WriteLine("1. Buscar por ID.");
+                        Console.WriteLine("2. Buscar por nombre");
+                        Console.WriteLine("3. Buscar por DNI");
                         tecla = Console.ReadKey(true);
                         switch (tecla.Key)
                         {
-                            case ConsoleKey.D1: case ConsoleKey.NumPad1:
+                            case ConsoleKey.D1:
+                            case ConsoleKey.NumPad1:
                                 Console.Write("\nIntroduzca el id a buscar: ");
                                 auxUInt = uint.Parse(Console.ReadLine());
-                                if(BuscaPorID(auxUInt) == -1)
-                                    Console.WriteLine("El id {0} no existe en la colección.", auxUInt);
+                                if (BuscaPorID(auxUInt) == -1)
+                                    Console.WriteLine("El id {0} no existe en la colección.Pulsa una tecla para volver al menú.", auxUInt);
+                                else
+                                {
+                                    Console.WriteLine("Mostrando los datos de la persona: ");
+                                    Console.WriteLine(listado[BuscaPorID(auxUInt)].ToString());
+                                }
                                 break;
-                            case ConsoleKey.D2: case ConsoleKey.NumPad2:
-                                Console.Write("\nIntroduce el nombre a buscar: ");
+                            case ConsoleKey.D2:
+                            case ConsoleKey.NumPad2:
+                                Console.Write("\nIntroduce el/los nombre/s a buscar: ");
                                 aux = Console.ReadLine();
-                                BuscaPorNombre(aux);
+                                auxArray = BuscaPorNombre(aux);
+                                if (auxArray[0] == -1)
+                                    Console.WriteLine("El nombre {0} no existe en la colección.Pulsa una tecla para volver al menú.", aux);
+                                else
+                                {
+                                    Console.WriteLine("Mostrando los datos de búsqueda: ");
+                                    for (int i = 0; i < auxArray.Length; i++)
+                                        Console.WriteLine(listado[auxArray[i]]);
+                                }
+
+                                break;
+                            case ConsoleKey.D3:
+                            case ConsoleKey.NumPad3:
+                                Console.Write("\nIntroduzca el DNI a buscar: ");
+                                aux = Console.ReadLine();
+                                if (BuscaPorDNI(aux) == -1)
+                                    Console.WriteLine("El DNI {0} no existe en la colección.Pulsa una tecla para volver al menú.", aux);
+                                else
+                                {
+                                    Console.WriteLine("Mostrando los datos de la persona: ");
+                                    Console.WriteLine(listado[BuscaPorDNI(aux)].ToString());
+                                }
                                 break;
                         }
                         Console.WriteLine("\n\nPulsa una tecla para volver al menú.");
