@@ -65,7 +65,7 @@ namespace App_Clase_List_Cartas
         static void Main(string[] args)
         {
             Baraja1.Add(CrearCarta());
-            AñadirVariasCartas(Baraja1, 20);
+            AnnadirVariasCartas(Baraja1, 20);
             ListadoBaraja(Baraja1);
         }
 
@@ -99,7 +99,7 @@ namespace App_Clase_List_Cartas
         /// </summary>
         /// <param name="baraja">La lista a la que añadiremos el intervalo de cartas.</param>
         /// <param name="nCartas">El total de cartas a añadir.</param>
-        static void AñadirVariasCartas(List<Carta> baraja, int nCartas)
+        static void AnnadirVariasCartas(List<Carta> baraja, int nCartas)
         {
             for(int i = 0; i < nCartas; i++)
                 baraja.Add(CrearCarta());
