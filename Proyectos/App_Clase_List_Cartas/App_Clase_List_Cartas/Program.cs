@@ -59,9 +59,60 @@ namespace App_Clase_List_Cartas
             #endregion
         }
 
+        List<Carta> Baraja1 = new List<Carta>();
+        static Random rnd = new Random();
 
         static void Main(string[] args)
         {
         }
+
+
+        #region Métodos que gestionan barajas (o lo intentan porque son deprecated).
+        /// <summary>
+        /// Método que crea una carta aleatoria
+        /// </summary>
+        /// <returns>La dirección de una carta.</returns>
+        static Carta CrearCarta()
+        {
+            return new Carta(rnd.Next(1, 13), (Palos)rnd.Next(0, 4));
+        }
+
+        /// <summary>
+        /// Muestra información sobre una carta en concreto.
+        /// </summary>
+        /// <param name="carta">La carta de la que veremos la información</param>
+        static void VerCarta(Carta carta)
+        {
+            Console.WriteLine();
+            Console.WriteLine("     Valor: {0}", carta.GetValor());
+            Console.WriteLine("    Nombre: {0}", carta.GetNombre());
+            Console.WriteLine("     Palo : {0}", carta.GetPalo());
+            Console.WriteLine("      Peso: {0}", carta.GetPeso());
+        }
+
+        /// <summary>
+        /// Añade N cartas a una lista.
+        /// </summary>
+        /// <param name="baraja">La lista a la que añadiremos el intervalo de cartas.</param>
+        /// <param name="nCartas">El total de cartas a añadir.</param>
+        static void AñadirVariasCartas(List<Carta> baraja, int nCartas)
+        {
+            for(int i = 0; i < nCartas; i++)
+                baraja.Add(CrearCarta());
+        }
+
+        /// <summary>
+        /// Muestra un listado en consola de una lista de cartas.
+        /// </summary>
+        /// <param name="baraja">La baraja que queremos listar.</param>
+        static void ListadoBaraja(List<Carta> baraja)
+        {
+
+            Console.WriteLine("{0,3}\t{1}\t{2}\t{3}", "Nombre", "Valor", "Palo", "Peso");
+
+            foreach(Carta unaCarta in baraja)
+                Console.WriteLine("{0,3}\t{1}\t{2}\t{3}", unaCarta.GetValor(), unaCarta.GetNombre(), unaCarta.GetPalo(), unaCarta.GetPeso());
+        } 
+        #endregion
     }
 }
