@@ -59,15 +59,19 @@ namespace App_Clase_List_Cartas
             #endregion
         }
 
-        List<Carta> Baraja1 = new List<Carta>();
+        static List<Carta> Baraja1 = new List<Carta>();
         static Random rnd = new Random();
 
         static void Main(string[] args)
         {
+            Baraja1.Add(CrearCarta());
+            AñadirVariasCartas(Baraja1, 20);
+            ListadoBaraja(Baraja1);
         }
 
 
         #region Métodos que gestionan barajas (o lo intentan porque son deprecated).
+
         /// <summary>
         /// Método que crea una carta aleatoria
         /// </summary>
@@ -112,7 +116,18 @@ namespace App_Clase_List_Cartas
 
             foreach(Carta unaCarta in baraja)
                 Console.WriteLine("{0,3}\t{1}\t{2}\t{3}", unaCarta.GetValor(), unaCarta.GetNombre(), unaCarta.GetPalo(), unaCarta.GetPeso());
-        } 
+        }
+
+        /// <summary>
+        /// Muestra información de una baraja completa.
+        /// </summary>
+        /// <param name="baraja">La baraja para ver detalladamente.</param>
+        static void VerBaraja(List<Carta> baraja)
+        {
+            foreach(Carta UnaCarta in baraja)
+                VerCarta(UnaCarta);
+        }
+
         #endregion
     }
 }
