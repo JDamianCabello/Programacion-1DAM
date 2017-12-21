@@ -28,7 +28,7 @@ namespace App_Clase_Dictionary
 
         public override string ToString()
         {
-            return valor.ToString() + " ; " + nombre + "; " + peso + "; " + palo;
+            return valor.ToString().PadRight(2) + " ; " + nombre.PadRight(4) + " ; " + peso.ToString().PadRight(3) + " ; " + palo.PadRight(6);
         }
     }
 
@@ -57,10 +57,60 @@ namespace App_Clase_Dictionary
             
             Console.WriteLine("Hay {0} cartas.",Baraja.Count);
 
+            VerDiccionario(Baraja);
 
+            //Mostrar una carta
+            Carta valor = new Carta();
+            if(Baraja.TryGetValue("1Oro", out valor)) //Con TryGetValue obtenemos un bool si está o no y además guardamos en value su contenido.
+                Console.WriteLine(valor);
+
+
+            //Comprobar si existe una clave
+            if(Baraja.ContainsKey("1Oro"))
+                Console.WriteLine("La clave 1Oro existe.");
+
+
+            var claves = Baraja.Keys;
+            var valores = Baraja.Values;
+
+            //Mostrar claves
+            Console.WriteLine(" CLAVES ");
+            Console.WriteLine("".PadLeft(40, '='));
+            foreach(string tmp in claves)
+                Console.WriteLine(tmp);
+
+
+            //Mostrar claves
+            Console.WriteLine("\n\n\n VALORES ");
+            Console.WriteLine("".PadLeft(40, '='));
+            foreach(Carta tmp in valores)
+                Console.WriteLine(tmp);
+
+
+            //Borrar dato
+            BorrarEnDiccionario("1Oro", Baraja);
+            BorrarEnDiccionario("1Oro", Baraja);
             Console.ReadKey();
         }
 
+        static void VerDiccionario(Dictionary<string, Carta> dic)
+        {
+            Console.WriteLine("\n\n\n DATOS DEL DICCIONARIO ");
+            Console.WriteLine("".PadLeft(40,'='));
+
+            Console.WriteLine("[{0}]: {1}", "Clave".PadRight(6), "Valor");
+            Console.WriteLine("".PadLeft(40,'-'));
+            foreach(KeyValuePair<string, Carta> tmp in dic)
+                Console.WriteLine("[{0,6}]: {1}",tmp.Key, tmp.Value.ToString());
+        }
+
+        static void BorrarEnDiccionario(string key, Dictionary<string, Carta> dic)
+        {
+            if(dic.Remove(key))
+                Console.WriteLine("La entrada {0} se eliminó.", key);
+            else
+                Console.WriteLine("La entrada {0} no existe. No se eliminó nada.", key);
+        }
 
     }
 }
