@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app_POO_Clases_1", "app_POO_Clases_1\app_POO_Clases_1.csproj", "{8425098E-DC9C-4D86-BA58-2BBED7C7AB1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8425098E-DC9C-4D86-BA58-2BBED7C7AB1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8425098E-DC9C-4D86-BA58-2BBED7C7AB1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8425098E-DC9C-4D86-BA58-2BBED7C7AB1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8425098E-DC9C-4D86-BA58-2BBED7C7AB1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using CreadoraDeMenus;
 
 namespace Damian.app_POO_espacioNombres
 {
@@ -10,6 +12,9 @@ namespace Damian.app_POO_espacioNombres
     {
         static void Main(string[] args)
         {
+            string[] opciones={"uno","dos","tres"};
+            CreadoraDeMenus.CreaUnMenu.BucleMenuConfirmandoSalida(ConsoleKey.Escape, opciones, 1, ConsoleColor.Red, TipoMenu.cruz, "Mi menu");
+
             Console.WriteLine("Hola mundo.... desde Damian.app_POO_espacioNombres.Program");
             Holamundo.Escribe();
             Damian.Dos.ClaseDos.Saluda();
