@@ -8,6 +8,7 @@ namespace Ejer20
 {
     enum Palos { Oro, Copa, Espada, Basto };
 
+
     struct Carta
     {
         #region CamposDeLaEstructura
@@ -55,8 +56,10 @@ namespace Ejer20
     }
     class Program
     {
+        static List<Carta> baraja = CreaBarajaSieteYMedia();
         static void Main(string[] args)
         {
+            
         }
 
         private static List<Carta> CreaBarajaSieteYMedia()
