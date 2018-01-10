@@ -11,6 +11,7 @@ namespace App_POO_Clases_Herencia1
         static void Main(string[] args)
         {
             ClaseDerivada cd = new ClaseDerivada();
+            ClaseBase estoEsRaro = new ClaseDerivada();
             Console.WriteLine(cd.Saluda());
         }
     }
@@ -27,7 +28,7 @@ namespace App_POO_Clases_Herencia1
     {
         public override string SaludaAbs(string s)
         {
-            throw new NotImplementedException();
+            return "Soy el método abstracto heredado.";
         }
     }
 }
