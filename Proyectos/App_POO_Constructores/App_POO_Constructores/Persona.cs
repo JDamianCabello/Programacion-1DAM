@@ -8,16 +8,20 @@ namespace Damian.App_POO_Constructores
 {
     class Persona
     {
+        public static string quienSoy = "La clase persona to flama";
+
         #region camposDeLaClase
 
         // Campos: Se utilizan en las clases para almacenar el estado o los valores de la clase.
-
-        string _nombre;
+        public string _nombre;
         int _edad;
         string _nif;  
 
         #endregion 
       
+
+        #region constructores
+
         public Persona()
         {
             _nombre = "EmptyName";
@@ -30,7 +34,9 @@ namespace Damian.App_POO_Constructores
             _nombre = n;
             _edad = e;
             _nif = nif;
-        }
+        } 
+
+        #endregion
 
         // Destructor de la clase
         ~Persona()
