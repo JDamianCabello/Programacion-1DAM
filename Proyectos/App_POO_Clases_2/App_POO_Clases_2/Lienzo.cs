@@ -15,7 +15,13 @@ namespace App_POO_Clases_2
         public int _ancho;
 
 
-        public Lienzo() { }
+        public Lienzo()
+        {
+            _alto = 1;
+            _ancho = 1;
+            _x = 0;
+            _y = 0;
+        }
 
         public Lienzo(int x, int y, int alto, int ancho)
         {

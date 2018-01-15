@@ -10,6 +10,11 @@ namespace App_POO_Clases_2
     {
         string _color;
 
+        public LienzoImpresora(): base()
+        {
+            _color = "negro";
+        }
+
         public LienzoImpresora(int x, int y, int alto, int ancho, string color): base(x,y,alto,ancho)
         {
             _color = color;

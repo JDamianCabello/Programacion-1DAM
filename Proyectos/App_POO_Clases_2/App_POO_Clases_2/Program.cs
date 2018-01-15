@@ -10,9 +10,11 @@ namespace App_POO_Clases_2
     {
         static void Main(string[] args)
         {
-            LienzoImpresora hp = new LienzoImpresora(20,15,5,3,"Azul");
-
+            LienzoImpresora hp = new LienzoImpresora(20,15,5,3,"azul");
+            LienzoImpresora otraImpresora = new LienzoImpresora();
             hp.Dibuja();
+            Console.WriteLine("============================");
+            otraImpresora.Dibuja();
         }
     }
 }
