@@ -16,8 +16,8 @@ namespace App_POO_PropiedadesClase
             f1.Nota = 7.75F;
 
 
-            //OJO!! esta ficha tiene un 34 de nota que está controlado mediante la propiedad la cual si es > 10 pone 10 o < 0 con valor 0.
-            Ficha f2 = new Ficha("Juanito el loco", 20, 34.7F);
+            //OJO!! esta ficha tiene un -34 de nota que está controlado mediante la propiedad la cual si es > 10 pone 10 o < 0 con valor 0.
+            Ficha f2 = new Ficha("Juanito el loco", 20, -34.7F);
             Console.WriteLine(f1.ToString());
             Console.WriteLine(f2.ToString());
             Console.ReadKey();
@@ -40,7 +40,7 @@ namespace App_POO_PropiedadesClase
             Nota = nota;
         }
 
-        //Propiedades
+        //Propiedades escritas por mi.
         public string Nombre
         {
             get 
@@ -53,7 +53,6 @@ namespace App_POO_PropiedadesClase
                 _nombre = value;
             }
         }
-
         public float Nota
         {
             get { return _nota; }
@@ -64,12 +63,14 @@ namespace App_POO_PropiedadesClase
                 _nota = value < 0 ? 0 : value;
             }
         }
-
         public int Edad
         {
             get { return _edad; }
             set { _edad = value; }
         }
+
+        //Propiedades autoimplementadas/autopropiedades (La verdad no es demasiado recomendable...).
+        public string NExpediente { get; set; }
 
         public override string ToString()
         {
