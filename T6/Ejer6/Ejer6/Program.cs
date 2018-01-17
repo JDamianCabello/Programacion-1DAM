@@ -19,14 +19,16 @@ namespace Ejer6
                     if (dni > 99999999 || dni < 10000000)
                         throw new NumeroDniNoValidoException();
                     Console.WriteLine("El DNI completo es: ");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.Write(dni + " " + LetraDNI(dni));
+                    Console.ResetColor();
                     bandera = false;
                 }
                 catch (NumeroDniNoValidoException) { Console.WriteLine("ERROR: El número de DNI está inventado"); }
                 catch (FormatException) { Console.WriteLine("ERROR: El número de DNI no es válido"); } 
             } while (bandera);
 
-            Console.WriteLine("Pulsa una tecla para salir....");
+            Console.WriteLine("\n\nPulsa una tecla para salir....");
             Console.ReadKey();
         }
 
