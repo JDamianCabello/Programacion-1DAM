@@ -12,13 +12,15 @@ namespace PruebaDLL
         static void Main(string[] args)
         {
             string titulo = "Un fucking menú";
-            string[] opciones = { "opcion1", "opcion2", "opcion3", "opcion4", "opcion5", "opcion6" };
+            string[] opciones = { "opcion1", "opcion2", "opcion3", "opcion4", "opcion5", "opcion6","1234567890123456789" };
             string pie = "Un fucking pie";
 
-            Menu unMenu = new Menu(titulo,opciones,pie);
+            Menu unMenu = new Menu(TipoEscritura.Separada, titulo,opciones,pie);
 
             unMenu.Escribe();
             unMenu.PintaBorde(TipoMarco.Simple);
+
+            Console.ReadKey();
         }
     }
 }
