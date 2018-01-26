@@ -20,6 +20,8 @@ namespace ExamenRecu1TrimResuelto
 
         static void UIMenu()
         {
+            #region Variables necesarias
+
             //Declaro una variable ConsoleKeyInfo la cual es una estructura con estos datos : ConsoleKey key (tecla pulsada), char keychar (El caracter que envia) y ConsoleModifiers modifiers (lee teclas muertas ctrl, alt, mayus).
             ConsoleKeyInfo tecla;
 
@@ -75,7 +77,8 @@ namespace ExamenRecu1TrimResuelto
             //VARIABLES NECESARIAS PARA el MÉTODO DEL EJERCICIO 2
 
             string fraseAEncriptar = string.Empty;
-            int contador = 0;
+            int contador = 0; 
+            #endregion
 
             #region Nota del menú
             /*
@@ -98,7 +101,7 @@ namespace ExamenRecu1TrimResuelto
                  * 
                  * }
                  * while(bandera)
-                 */ 
+                 */
             #endregion
 
             do
