@@ -440,7 +440,6 @@ namespace ExamenRecu1TrimResuelto
                     break;
             }
 
-            Console.WriteLine("AVISO: ese \"?\" despues del número y antes de \"Euros\" es su simbolo de la moneda que no sale en consola.");
             Console.WriteLine("\n\nFin datos trabajador, pulsa una tecla para volver al menú.");
             Console.ReadKey();
 
