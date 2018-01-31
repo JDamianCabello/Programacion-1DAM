@@ -104,10 +104,12 @@ namespace ExamenRecu1TrimResuelto
                  */
             #endregion
 
+            
             do
             {
                 do
                 {
+                    Console.CursorVisible = false;
                     Console.Clear();
                     Console.WriteLine("Examen recuperación 1er Trimestre resuelto.\n\n");
                     Console.WriteLine("{0}     {1}     {2}", "Cabello", "Juan Damián", DateTime.Now.ToShortDateString()); //Obtenemos la fecha actual de la clase DateTime con su método now() y luego ToShortDateString() para la fecha corta (forma dd/mm/aaaa).
