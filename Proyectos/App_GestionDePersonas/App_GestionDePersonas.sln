@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_GestionDePersonas", "App_GestionDePersonas\App_GestionDePersonas.csproj", "{DFB7783E-EF15-43F7-ACD2-32797C2938FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFB7783E-EF15-43F7-ACD2-32797C2938FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB7783E-EF15-43F7-ACD2-32797C2938FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB7783E-EF15-43F7-ACD2-32797C2938FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB7783E-EF15-43F7-ACD2-32797C2938FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
