@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Javier.App_GestionDePersonas
+namespace App_GestionDePersonas
 {
     public class Persona
     {

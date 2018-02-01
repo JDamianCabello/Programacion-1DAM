@@ -4,30 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Javier.App_GestionDePersonas
+namespace App_GestionDePersonas
 {
     public class Principal
     {
         static void Main(string[] args)
         {
             ListaDePersonas Bomberos = new ListaDePersonas();
-            Bomberos.EntradaOK += Bomberos_EntradaOK;
+            //Bomberos.EntradaOK += Bomberos_EntradaOK;
             Bomberos.AnadirPersonaAleatoria();
-            Bomberos.AnadirPersonasAleatoria(150);
+            Bomberos.AnadirPersonasAleatoria(300);
             //Bomberos.ListarPersonas();
-            Bomberos.Listar("LISTADO DE BOMBEROS DE MÁLAGA");
+            //Bomberos.Listar("LISTADO DE BOMBEROS DE MÁLAGA");
 
-            Console.WriteLine("Hay {0} Personas", Bomberos.Cuantos);
-
-
-            Console.WriteLine("BOMBEROS SACADOS CON INDIZADORES DE CLASES:");
-            Console.WriteLine("---------------------------------------------");
-
-            for(int i = 10; i < 20; i++)
-                Console.WriteLine(Bomberos[i].ToString());
+            //Console.WriteLine("Hay {0} Personas", Bomberos.Cuantos);
 
 
-            Console.ReadLine();
+            //Console.WriteLine("BOMBEROS SACADOS CON INDIZADORES DE CLASES:");
+            //Console.WriteLine("---------------------------------------------");
+
+            //for(int i = 10; i < 20; i++)
+                //Console.WriteLine(Bomberos[i].ToString());
+
+            Bomberos.ListarPaginado("LISTADO PAGINADO");
         }
 
         static void Bomberos_EntradaOK(DateTime ahora)

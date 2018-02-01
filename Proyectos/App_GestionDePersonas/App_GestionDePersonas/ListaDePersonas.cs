@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Javier.App_GestionDePersonas
+namespace App_GestionDePersonas
 {
 
     public delegate void DlgAddPersona(DateTime ahora);
@@ -137,7 +137,54 @@ namespace Javier.App_GestionDePersonas
         public Persona this[int indice]
         {
             get { return _personas[indice]; }
-            set { _personas[indice] = value; }
+            set { _personas.Insert(indice, value); }
+        }
+
+        public void ListarPaginado(string tituloListado)
+        {
+            ConsoleKey salida = ConsoleKey.Escape;
+
+            int nLineasPorPagina = 30;
+            int nLineaActual = 0;
+            int nPaginaActual = 1;
+            int nPaginasDelListado = (int)Math.Ceiling((double)_personas.Count / (double)nLineasPorPagina);
+            int ancho = 74; //ancho de las líneas del listado
+
+            foreach(Persona unaPersona in _personas)
+            {
+                //Muestra la cabecera
+                if(nLineaActual == 0)
+                {
+                    Console.Clear();
+                    Console.CursorLeft = (ancho / 2) - (tituloListado.Length / 2);
+                    Console.WriteLine(tituloListado);
+                    Console.WriteLine("".PadRight(ancho,'='));
+                }
+
+                //Mostrar el cuerpo del listado
+                Console.WriteLine(unaPersona.ToString());
+                nLineaActual++;
+
+                //Mostrar pie
+                if(nLineasPorPagina == nLineaActual)
+                {
+                    Console.WriteLine("".PadRight(ancho, '='));
+                    Console.WriteLine("[Esc]Abortar listado.        Página{0}/{1}",nPaginaActual++,nPaginasDelListado);
+                    nLineaActual = 0;
+
+
+                    //Si se pulsa escape se aborta el listado.
+                    if(Console.ReadKey(true).Key == salida)
+                        return;
+                }
+
+            }
+            //Ultima pagina
+            Console.WriteLine("".PadRight(ancho, '='));
+            Console.WriteLine("Página{0}/{1}", nPaginaActual++, nPaginasDelListado);
+            Console.Write("     FIN DEL LISTADO");
+
+            Console.ReadLine();
         }
 
         #endregion
