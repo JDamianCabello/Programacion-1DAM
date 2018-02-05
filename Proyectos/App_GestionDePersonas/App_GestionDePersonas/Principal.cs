@@ -12,8 +12,8 @@ namespace App_GestionDePersonas
         {
             ListaDePersonas Bomberos = new ListaDePersonas();
             //Bomberos.EntradaOK += Bomberos_EntradaOK;
-            Bomberos.AnadirPersonaAleatoria();
-            Bomberos.AnadirPersonasAleatoria(300);
+            //Bomberos.AnadirPersonaAleatoria();
+            Bomberos.AnadirPersonasAleatoria(100);
             //Bomberos.ListarPersonas();
             //Bomberos.Listar("LISTADO DE BOMBEROS DE MÁLAGA");
 

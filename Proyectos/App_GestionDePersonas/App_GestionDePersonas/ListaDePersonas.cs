@@ -144,7 +144,7 @@ namespace App_GestionDePersonas
         {
             ConsoleKey salida = ConsoleKey.Escape;
 
-            int nLineasPorPagina = 30;
+            int nLineasPorPagina = 20;
             int nLineaActual = 0;
             int nPaginaActual = 1;
             int nPaginasDelListado = (int)Math.Ceiling((double)_personas.Count / (double)nLineasPorPagina);
@@ -169,7 +169,7 @@ namespace App_GestionDePersonas
                 if(nLineasPorPagina == nLineaActual)
                 {
                     Console.WriteLine("".PadRight(ancho, '='));
-                    Console.WriteLine("[Esc]Abortar listado.        Página{0}/{1}",nPaginaActual++,nPaginasDelListado);
+                    Console.WriteLine("[Esc]Abortar listado.        Página {0}/{1}",nPaginaActual++,nPaginasDelListado);
                     nLineaActual = 0;
 
 
@@ -179,12 +179,15 @@ namespace App_GestionDePersonas
                 }
 
             }
-            //Ultima pagina
-            Console.WriteLine("".PadRight(ancho, '='));
-            Console.WriteLine("Página{0}/{1}", nPaginaActual++, nPaginasDelListado);
-            Console.Write("     FIN DEL LISTADO");
-
-            Console.ReadLine();
+            if(_personas.Count % nLineasPorPagina != 0)
+            {
+                //Ultima pagina
+                Console.WriteLine("".PadRight(ancho, '='));
+                Console.WriteLine("Página {0}/{1}", nPaginaActual++, nPaginasDelListado);
+                Console.Write("     FIN DEL LISTADO");
+                Console.ReadKey(true);
+            }
+            
         }
 
         #endregion
