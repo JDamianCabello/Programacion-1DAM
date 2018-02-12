@@ -7,8 +7,8 @@ namespace Ejer8
         uint _precio;
         DateTime _fechaCompra;
 
-        public uint Precio { get => _precio; set => _precio = value; }
-        public DateTime FechaCompra { get => _fechaCompra; set => _fechaCompra = value; }
+        public uint Precio { get {return _precio;} set { _precio = value; }}
+        public DateTime FechaCompra { get { return _fechaCompra; } set { _fechaCompra = value; } }
 
         public override string ToString()
         {

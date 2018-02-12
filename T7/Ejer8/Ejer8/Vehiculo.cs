@@ -62,15 +62,16 @@ namespace Ejer8
             }
         }
 
-        public string[] Colores { get => _colores; set => _colores = value; }
+        public string[] Colores { get { return _colores; } set { _colores = value; } }
 
         public override string ToString()
         {
-            return  "---------------------------------------------\n" +
+            return "---------------------------------------------\n" +
                     "          NOMBRE: " + Nombre + "\n" +
                     "NÚMERO DE RUEDAS: " + NRuedas + "\n" +
                     "           COLOR: " + Color + "\n" +
-                    "   TIPO TRACCIÓN: " + AsignaTipoTraccion;
+                    "   TIPO TRACCIÓN: " + AsignaTipoTraccion + "\n" +
+                    "   TIPO VEHÍCULO: " + this.GetType().Name;
         }
     }
 }
