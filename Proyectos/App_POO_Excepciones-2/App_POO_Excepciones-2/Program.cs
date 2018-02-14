@@ -21,6 +21,7 @@ namespace App_POO_Excepciones_2
             }
             catch(Exception e)
             {
+                
                 Console.WriteLine(e.Message);
                 Console.WriteLine(e.Source);
                 Console.WriteLine(e.TargetSite);

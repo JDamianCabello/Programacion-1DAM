@@ -46,8 +46,13 @@ namespace Ejer1
                     else
                         Console.Write(" ");
                 }
-                Console.Write("\n");Exception
+                Console.Write("\n");
             }
+        }
+
+        private void pinta(int desplazamientoDerecha, int fin, char horizontal, char esquinas, char vertical)
+        {
+ 
         }
     }
 }
