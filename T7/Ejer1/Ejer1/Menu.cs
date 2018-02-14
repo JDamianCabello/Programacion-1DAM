@@ -41,12 +41,6 @@ namespace Ejer1
 
         }
 
-        public void PintaBorde(TipoMarco tipoMarco)
-        {
-            Marco unMarco = new Marco(tipoMarco);
- 
-        }
-
         private int ObtenerMaxLargo (string titulo, string[] opciones, string pie)
         {
             int aux = pie.Length > titulo.Length ? pie.Length : titulo.Length;

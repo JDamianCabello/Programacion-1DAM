@@ -20,8 +20,22 @@ namespace PruebaDLL
             //unMenu.Escribe();
             //unMenu.PintaBorde(TipoMarco.Simple);
 
-             Marco m = new Marco(TipoMarco.Simple);
+            Console.Clear();
+            //Console.WriteLine(Marco.PintaRecuadro('*', '.',3,40,1));
+            Console.WriteLine(Marco.PintaRecuadro('*', '.','@', 3, 25, 1));
 
+            Console.WriteLine(Marco.PintaRecuadro('*',' ','q','w','e','r',3,5,1));
+
+            Console.WriteLine(Marco.PintaRecuadro('-','|',' ','+',3,25,1));
+
+            Console.WriteLine(Marco.PintaRecuadro(3,'*'));
+            Console.WriteLine(Marco.RecuadrosPorDefecto(TipoMarco.Básico, 3));
+            Console.WriteLine(Marco.RecuadrosPorDefecto(TipoMarco.Cruz,3));
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine(Marco.RecuadrosPorDefecto(TipoMarco.Simple, 3));
+            Console.ResetColor();
+            Console.WriteLine(Marco.RecuadrosPorDefecto(TipoMarco.Doble,3));
 
 
             Console.ReadKey();
