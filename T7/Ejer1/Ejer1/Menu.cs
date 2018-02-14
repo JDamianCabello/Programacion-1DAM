@@ -12,8 +12,6 @@ namespace Ejer1
         string _titulo;
         string[] _opciones;
         string _pie;
-        int _largoMax;
-        int _altoMax;
 
         public Menu(TipoEscritura tipo, string titulo, string[] opciones, string pie)
         {
@@ -21,11 +19,10 @@ namespace Ejer1
             this._titulo = titulo;
             this._opciones = opciones;
             this._pie = pie;
-            _largoMax = ObtenerMaxLargo(titulo, opciones, pie);
-            _altoMax = ObtenerMaxAncho(titulo, opciones, pie);
-            if(tipo == TipoEscritura.Separada)
-                _altoMax += 2;
             
+        }
+        public Menu()
+        {
         }
 
         public void Escribe()
@@ -46,7 +43,7 @@ namespace Ejer1
 
         public void PintaBorde(TipoMarco tipoMarco)
         {
-            Marco unMarco = new Marco(tipoMarco, _largoMax, _altoMax);
+            Marco unMarco = new Marco(tipoMarco);
  
         }
 

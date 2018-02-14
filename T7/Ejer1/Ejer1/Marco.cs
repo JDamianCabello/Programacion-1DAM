@@ -8,24 +8,46 @@ namespace Ejer1
 {
     public enum TipoMarco { Simple };
 
-    class Marco
+    public class Marco
     {
-        public Marco(TipoMarco unTipoMarco, int largoMax, int anchoMax)
+        uint _altoMax = (uint)Console.WindowHeight - 1;
+        uint _largoMax = (uint)Console.WindowWidth - 2;
+        public Marco(TipoMarco unTipoMarco)
         {
             switch(unTipoMarco)
             {
                 case TipoMarco.Simple:
-                    TSimple(largoMax, anchoMax);
+                    TSimple();
                     break;
                 default:
                     break;
             }
         }
 
-        private void TSimple(int largo, int ancho)
+        private void TSimple()
         {
-            Console.WriteLine(largo);
-            Console.WriteLine(ancho);
+            PintaCabeza(1,3,'-', '+', '|');
+            PintaCabeza(1, 15, '-', '+', '|');
+        }
+
+        private void PintaCabeza(int inicio, int fin, char horizontal, char esquinas, char vertical)
+        {
+            for(int i = 0; i < fin; i++)
+            {
+                Console.CursorLeft = inicio;
+                for(int j = 0; j < _largoMax; j++)
+                {
+                    if(i == 0 && j == 0 || i == 0 && j == _largoMax - 1 || i == 2 && j == 0 || i == 2 && j == _largoMax - 1)
+                        Console.Write(esquinas);
+                    else if((i == 1 && j == 0) || (i== 1 && j == _largoMax - 1))
+                        Console.Write(vertical);
+                    else if (i== 0 || i == 2)
+                        Console.Write(horizontal);
+                    else
+                        Console.Write(" ");
+                }
+                Console.Write("\n");Exception
+            }
         }
     }
 }
