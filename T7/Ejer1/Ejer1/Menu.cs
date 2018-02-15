@@ -13,16 +13,24 @@ namespace Ejer1
         string[] _opciones;
         string _pie;
 
-        public Menu(TipoEscritura tipo, string titulo, string[] opciones, string pie)
+        public static string EscribeTitulo(string titulo, string marco, int separacionMarco, bool mayusculas)
         {
-            
-            this._titulo = titulo;
-            this._opciones = opciones;
-            this._pie = pie;
-            
-        }
-        public Menu()
-        {
+            char[] separador = {'\n'};
+            string[] aux = marco.Split(separador[0]);
+            string tmp = string.Empty;
+            int mitadMarco = aux.Length / 2;
+            int mitadMenu = (aux[mitadMarco].Length /2) - (titulo.Length/2);
+
+            for(int i = 0; i < aux.Length; i++)
+            {
+                for(int j = 0; j < aux[i].Length; j++)
+                {
+                    if(i == mitadMarco && j == mitadMenu)
+                        tmp += "";
+                }
+            }
+
+            return tmp;
         }
 
         public void Escribe()
@@ -50,16 +58,6 @@ namespace Ejer1
                     aux = opciones[i].Length;
 
             return aux - 1;
-
-        }
-
-        private int ObtenerMaxAncho(string titulo, string[] opciones, string pie)
-        {
-            int aux = 2; //Se inicializa en uno debido a que siempre hay titulo y pie.
-
-            aux += opciones.Length;
-
-            return aux + 1;
 
         }
     }

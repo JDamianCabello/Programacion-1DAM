@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejer1
 {
-    public enum TipoMarco { Básico, Cruz, Simple,Doble };
+    public enum TipoMarco { Básico, Cruz, Simple,Doble ,BordeO, Punto };
 
-    public class Marco
+    public abstract class Marco
     {
         uint _altoMax = (uint)Console.WindowHeight - 1;
         uint _largoMax = (uint)Console.WindowWidth - 2;
@@ -30,6 +30,12 @@ namespace Ejer1
                 case TipoMarco.Doble:
                     tmp = Marco.PintaRecuadro('═', '║',' ', '╔', '╗', '╚', '╝',altoRecuadro, Console.WindowWidth - 2, 1);
                     break;
+                case TipoMarco.BordeO:
+                    tmp = Marco.PintaRecuadro('o',' ','O',altoRecuadro, Console.WindowWidth - 2, 1);
+                    break;
+                case TipoMarco.Punto:
+                    tmp = Marco.PintaRecuadro('·', ' ', altoRecuadro, Console.WindowWidth - 2, 1);
+                    break;
             }
             return tmp;
         }
@@ -46,9 +52,9 @@ namespace Ejer1
 
             for (int i = 0; i < totalAlto; i++)
             {
-                for (int j = 0; j < Console.WindowWidth; j++)
+                for (int j = 0; j < Console.WindowWidth - 1; j++)
                 {
-                    if (j == 0 || j == Console.WindowWidth - 1 || i == 0 || i == totalAlto - 1)
+                    if (j == 0 || j == Console.WindowWidth - 2 || i == 0 || i == totalAlto - 1)
                         tmp += borde;
                     else
                         tmp += ' ';
@@ -221,6 +227,35 @@ namespace Ejer1
                             tmp += bordeHorizontal;
                            else
                             tmp += bordeVertical;
+                    else
+                        tmp += relleno;
+                }
+                tmp += "\n";
+            }
+            return tmp;
+        }
+
+        public static string PintaRecuadro(char bordeSuperior, char bordeInferior, char bordeIzquierda, char bordeDerecha, char relleno, char esquina1, char esquina2, char esquina3, char esquina4, int totalAlto, int largo, int desplazamientoDerecha)
+        {
+            string tmp = string.Empty;
+
+            for(int i = 0; i < totalAlto; i++)
+            {
+                tmp += "".PadRight(desplazamientoDerecha, ' ');
+                for(int j = 0; j < largo; j++)
+                {
+                    if(j == 0 || j == largo - 1 || i == 0 || i == totalAlto - 1)
+                        if(i == 0 && j == 0 || i == totalAlto - 1 && j == 0 || i == 0 && j == largo - 1 || i == totalAlto - 1 && j == largo - 1)
+                            tmp += ObtenerEsquinaActual(j, i, totalAlto, largo, esquina1, esquina2, esquina3, esquina4);
+                        else
+                            if(i == 0)
+                                tmp += bordeSuperior;
+                            else if(i == totalAlto - 1)
+                                tmp += bordeInferior;
+                            else if(i > 0 && j == 0)
+                                tmp += bordeIzquierda;
+                            else
+                                tmp += bordeDerecha;
                     else
                         tmp += relleno;
                 }
