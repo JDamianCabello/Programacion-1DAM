@@ -5,7 +5,7 @@ namespace Matrix
     class Program
     {
         static int velocidad = 30;
-        static byte[,] tablero = TableroAlea(Console.WindowHeight - 1, Console.WindowWidth - 1);
+        static byte[,] tablero = TableroAlea(Console.WindowHeight, Console.WindowWidth-1);
         static ConsoleColor colorFondo = ConsoleColor.DarkGray;
         static bool resetAutomatico = false;
         static int contadorIteracionesReset = 5000;
@@ -24,14 +24,13 @@ namespace Matrix
             {
                 do
                 {
-                    if (resetAutomatico && totalIteraciones == contadorIteracionesReset)
+                    if (resetAutomatico && totalIteraciones >= contadorIteracionesReset)
                     {
                         Console.Clear();
                         PintaTableroInicio(HazString(tablero));
                         totalIteraciones = 0;
                     }
                     Cascada(tablero, velocidad);
-                    Console.Title = GeneraTitulo();
                 } while (!Console.KeyAvailable);
 
 
@@ -66,11 +65,11 @@ namespace Matrix
             Console.CursorVisible = false;
             int opcionSeleccionada = 1;
             ConsoleColor colorSeleccion = ConsoleColor.Cyan;
-            
+            string aux = string.Empty;
 
             do
             {
-                string aux = resetAutomatico ? "   Activado" : "   Desactivado";
+                aux = resetAutomatico ? "   Activado" : "   Desactivado";
                 Console.Clear();
                 Console.ResetColor();
                 Console.CursorTop = 20;
@@ -167,7 +166,7 @@ namespace Matrix
                     switch (opcionSeleccionada)
                     {
                         case 1:
-                            if (velocidad != 3000)
+                            if (velocidad != 2000)
                                 velocidad += 10;
                             break;
                         case 2:
@@ -251,7 +250,7 @@ namespace Matrix
             int ejeX = rnd.Next(0,a.GetLength(1));
             int posCambio = a.GetLength(0) - ejeY - 1;
             int posDesplazamiento = rnd.Next(0, posCambio + 1);
-            for(int i = 0; i < posDesplazamiento; i++)
+            for(int i = 0; i <= posDesplazamiento; i++)
             {
                 Console.SetCursorPosition(ejeX, ejeY + i);
                 
