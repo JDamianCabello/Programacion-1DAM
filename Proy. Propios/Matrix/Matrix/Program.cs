@@ -6,8 +6,8 @@ namespace Matrix
     {
         static int anchoTablero = Console.WindowWidth - 1;
         static int altoTablero = Console.WindowHeight;
-        static int MAXANCHOTABLERO = Console.WindowWidth - 1;
-        static int MAXALTOTABLERO = Console.WindowHeight;
+        static int MAXANCHOTABLERO = Console.LargestWindowWidth - 2;
+        static int MAXALTOTABLERO = Console.LargestWindowHeight + 2;
         static int velocidad = 30;
         static byte[,] tablero = TableroAlea(altoTablero, anchoTablero);
         static ConsoleColor colorFondo = ConsoleColor.DarkGray;
@@ -18,10 +18,12 @@ namespace Matrix
         static int totalIteraciones = 0;
 
 
+
         static void Main(string[] args)
         {
-            
-
+            Console.BufferWidth = Console.LargestWindowWidth;
+            Console.BufferHeight = Console.LargestWindowHeight;
+            Console.SetWindowSize(anchoTablero, altoTablero);
             Console.CursorVisible = false;
             ConsoleKeyInfo tecla;
             GeneraTitulo();
@@ -30,7 +32,13 @@ namespace Matrix
             {
                 do
                 {
-                    Console.SetCursorPosition(0, 0);
+                    try
+                    {
+                        Console.SetCursorPosition(0, 0);
+                    }
+                    catch
+                    {
+                    }
                     if (resetAutomatico && totalIteraciones >= contadorIteracionesReset)
                     {
                         Console.Clear();
@@ -46,20 +54,32 @@ namespace Matrix
                 if (tecla.Key == ConsoleKey.C)
                 {
                     Console.Clear();
+                    Console.SetWindowSize(anchoTablero, altoTablero);
                     PintaTableroInicio(HazString(tablero));
                 }
 
                 if (tecla.Key == ConsoleKey.R)
                 {
-                    tablero = TableroAlea(altoTablero, anchoTablero);
                     Console.Clear();
+                    Console.SetWindowSize(anchoTablero, altoTablero);
+                    tablero = TableroAlea(altoTablero, anchoTablero);
                     PintaTableroInicio(HazString(tablero));
                 }
 
                 if (tecla.Key == ConsoleKey.Tab)
                 {
                     Opciones();
+                    Console.Clear();
+                    Console.SetWindowSize(anchoTablero, altoTablero);
                     tablero = TableroAlea(altoTablero, anchoTablero);
+                    PintaTableroInicio(HazString(tablero));
+                }
+
+                if(tecla.Key == ConsoleKey.F)
+                {
+                    Console.WindowWidth = Console.LargestWindowWidth;
+                    Console.WindowHeight = Console.LargestWindowHeight;
+                    tablero = TableroAlea(Console.LargestWindowHeight - 1, Console.LargestWindowWidth - 1);
                     Console.Clear();
                     PintaTableroInicio(HazString(tablero));
                 }
@@ -348,7 +368,13 @@ namespace Matrix
             int posDesplazamiento = rnd.Next(0, posCambio + 1);
             for(int i = 0; i <= posDesplazamiento; i++)
             {
-                Console.SetCursorPosition(ejeX, ejeY + i);
+                try
+                {
+                    Console.SetCursorPosition(ejeX, ejeY + i);
+                }
+                catch(Exception)
+                {
+                }
 
                 do
                 {
