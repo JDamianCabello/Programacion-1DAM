@@ -24,7 +24,7 @@ namespace App_RedireccionarSalidaConsola
 
             StreamWriter sw = new StreamWriter(fs);
 
-            Console.SetOut(sw);
+            Console.SetOut(sw); //Este método necesita un TextWriter, como StreamWriter hereda del mismo, se lo podemos pasar (Esto es debido al polimorfismo).
 
             //Escribimos información de salida la cual irá al fichero.
             Console.WriteLine("Tengo sueño! D:");
