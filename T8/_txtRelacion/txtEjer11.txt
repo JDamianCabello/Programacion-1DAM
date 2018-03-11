@@ -1,0 +1,3 @@
+prueba del programa
+ok, va bien
+bye
