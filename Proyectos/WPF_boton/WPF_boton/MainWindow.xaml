@@ -1,0 +1,9 @@
+﻿<Window x:Class="WPF_boton.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button x:Name="Miboton" Content="Button" HorizontalAlignment="Left" Margin="112,69,0,0" VerticalAlignment="Top" Width="314" Click="LoHeClickcado" Background="Red" Height="151" KeyDown="Miboton_KeyDown"/>
+
+    </Grid>
+</Window>

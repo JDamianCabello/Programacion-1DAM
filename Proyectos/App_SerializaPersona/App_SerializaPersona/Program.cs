@@ -18,7 +18,7 @@ namespace App_SerializaPersona
 
             personas.Anadir(new Persona("Pepito","Grillo", 123.66F));
             personas.Anadir(new Persona("Romso", "Kimary", 1223.66F));
-            personas.Anadir(new Persona("Ichigo", "Kurosaky", 123.66F));
+            personas.Anadir(new Persona("Ichigo", "Kurosaki", 123.66F));
 
             personas.Listar();
             
