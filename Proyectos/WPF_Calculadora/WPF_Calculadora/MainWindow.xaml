@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPF_Calculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="457.895" Width="581.579">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="323" Margin="64,48,0,0" VerticalAlignment="Top" Width="449">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--Apartado de arriba de la calculadora-->
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" TextAlignment="Right" Background="Black" FontFamily="Arial" FontSize="30" FontWeight="Bold" Foreground="White" Margin="5">0</TextBlock>
+            <Button Content="0" HorizontalAlignment="Left" Margin="5,5,0,10" Grid.Row="4" Grid.Column="3" VerticalAlignment="Center" Height="50" Width="50"/>
+        </Grid>
+
+    </Grid>
+</Window>
