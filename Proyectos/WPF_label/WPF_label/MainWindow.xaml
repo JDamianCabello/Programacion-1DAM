@@ -1,0 +1,28 @@
+﻿<Window x:Class="WPF_label.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <TextBlock FontFamily="Arial" FontSize="30" HorizontalAlignment="Center" Margin="20">Entrada de datos</TextBlock>
+            <DockPanel>
+                <Label Name="lbl_etiqueta1" VerticalAlignment="Center" Target="{Binding ElementName=txt_nombre}">
+                    <AccessText>_Nombre</AccessText>
+                </Label>
+                <TextBox Name="txt_nombre" Margin="10" FontSize="15" VerticalAlignment="Center"/>
+            </DockPanel>
+            <DockPanel>
+                <Label Name="lbl_etiqueta2" VerticalAlignment="Center" Target="{Binding ElementName=txt_apellidos}">
+                    <AccessText>_Apellidos</AccessText>
+                </Label>
+                <TextBox Name="txt_apellidos" Margin="10" FontSize="15" VerticalAlignment="Center"/>
+            </DockPanel>
+            <Label>
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="52" Height="52" Source="test.jpg"/>
+                    <Label VerticalAlignment="Center">Label con contenido mixto</Label>
+                </StackPanel>
+            </Label>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+﻿<Window x:Class="WPF_Canvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="398.684" Width="525">
+    <Grid Background="#FF6AA459">
+        <Canvas Name="cnv_panel" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="497" Background="#FFCAF0C1">
+            <Rectangle Fill="Blue" Height="32" Canvas.Left="148" Canvas.Top="110" Width="30"/>
+        </Canvas>
+        <Button Content="Añadir rectángulo" HorizontalAlignment="Left" Margin="196,326,0,0" VerticalAlignment="Top" Width="137" Height="32" Click="Button_Click"/>
+
+    </Grid>
+</Window>

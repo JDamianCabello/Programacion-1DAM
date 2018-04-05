@@ -1,0 +1,36 @@
+﻿<Window x:Class="WPF_VisorImagenes_cutre.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <ScrollViewer>
+    <WrapPanel Orientation="Horizontal">
+        <Image Source="Imagenes/test.jpg" Height="103" Width="186"/>
+        <Image Source="Imagenes/test.jpg" Height="118" Width="240"/>
+        <Image Source="Imagenes/test.jpg" Height="47" Width="77"/>
+        <Image Source="Imagenes/test.jpg" Height="141" Width="232"/>
+        <Image Source="Imagenes/test.jpg" Height="82" Width="209"/>
+        <Image Source="Imagenes/test.jpg" Height="185" Width="330" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-33.275"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="Imagenes/test.jpg" Height="188" Width="457" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="137.56"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="Imagenes/test.jpg" Height="200" Width="373"/>
+        <Image Source="Imagenes/test.jpg" Height="200" Width="373"/>
+    </WrapPanel>
+    </ScrollViewer>
+</Window>
