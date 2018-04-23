@@ -1,0 +1,17 @@
+﻿<Window x:Class="WPF_EventosTuneling.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" MouseMove="Window_MouseMove">
+    <Grid>
+        <StackPanel>
+            <TextBlock Margin="10" HorizontalAlignment="Left" Name="TB" FontSize="16" Foreground="Red"/>
+            <StackPanel HorizontalAlignment="Left" Height="122">
+                <TextBlock FontFamily="Arial">
+                    <Run Text="Ole WPF"></Run>
+                </TextBlock>
+                <Rectangle Fill="Aqua" Width="300" Height="200"/>
+            </StackPanel>
+            <Ellipse Fill="Green" Height="100" Margin="234,0,126,0" MouseMove="Ellipse_MouseMove"/>
+        </StackPanel>
+    </Grid>
+</Window>

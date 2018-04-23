@@ -1,0 +1,35 @@
+﻿<Window x:Class="JuegoParejaDeCartas.Opciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JuegoParejaDeCartas"
+        mc:Ignorable="d"
+        Title="Opciones" Height="503.094" Width="996.792" Loaded="Window_Loaded">
+    <Canvas>
+
+        <Label Content="Fondo tablero:" Canvas.Left="32" Canvas.Top="172"/>
+        <Expander Name="exp_vistaPrevia" Header="Ver cartas" Height="276" Canvas.Left="490" Canvas.Top="54" Width="424" ExpandDirection="Right">
+            <StackPanel Name="spn_vistaPreviaCartas" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        </Expander>
+        <ComboBox Name="cbx_fondo" Canvas.Left="176" Canvas.Top="167" Width="182" Height="31" SelectionChanged="cbx_fondo_SelectionChanged"/>
+        <Label Content="Reverso cartas:" Canvas.Left="32" Canvas.Top="230"/>
+        <CheckBox Name="chec_repeticion" Content="Permitir repetición de cartas" Canvas.Left="134" Canvas.Top="285" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Height="25" Width="213"/>
+        <ComboBox Name="cbx_reversoCartas" Canvas.Left="176" Canvas.Top="225" Width="182" SelectionChanged="cbx_reversoCartas_SelectionChanged" RenderTransformOrigin="0.494,0.523" Height="31"/>
+        <Button Content="Acerca de..." Canvas.Left="152" Canvas.Top="404" Width="168" Height="30"/>
+        <Button Content="Volver al menú principal" Canvas.Left="152" Canvas.Top="348" Width="168" Height="30" Click="Button_Click"/>
+        <Label Content="Temática:" Canvas.Left="32" Canvas.Top="97"/>
+        <ComboBox x:Name="cbx_tematica" Canvas.Left="176" Canvas.Top="97" Width="182" Height="31" SelectionChanged="cbx_tematica_SelectionChanged"/>
+        <CheckBox Name="chec_alea" Content="Temáticas aleatorias" Canvas.Left="134" Canvas.Top="310" Width="170" Checked="chec_alea_Checked" Unchecked="chec_alea_Unchecked"/>
+        <Label Content="Dificultad:" Canvas.Left="32" Canvas.Top="37"/>
+        <ComboBox Name="cbx_dificultad" Canvas.Left="176" Canvas.Top="37" Width="182" Height="31" SelectionChanged="cbx_dificultad_SelectionChanged">
+            <ComboBoxItem Content="Facil (10 cartas)"/>
+            <ComboBoxItem Content="Normal (20 cartas)"/>
+            <ComboBoxItem Content="Dificil (40 cartas)"/>
+            <ComboBoxItem Content="Insano (50 cartas rotantes)"/>
+        </ComboBox>
+            
+
+    </Canvas>
+</Window>

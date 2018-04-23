@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B98EB728-C5A4-49E3-983C-E761B5C46E09}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JuegoParejaDeCartas</RootNamespace>
+    <AssemblyName>JuegoParejaDeCartas</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Juego.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Juego.xaml.cs">
+      <DependentUpon>Juego.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="imagenesGeneralJuego\Thumbs.db" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenesGeneralJuego\1.png" />
+    <Resource Include="imagenesGeneralJuego\10.png" />
+    <Resource Include="imagenesGeneralJuego\100.png" />
+    <Resource Include="imagenesGeneralJuego\101.png" />
+    <Resource Include="imagenesGeneralJuego\102.png" />
+    <Resource Include="imagenesGeneralJuego\103.png" />
+    <Resource Include="imagenesGeneralJuego\104.png" />
+    <Resource Include="imagenesGeneralJuego\105.png" />
+    <Resource Include="imagenesGeneralJuego\106.png" />
+    <Resource Include="imagenesGeneralJuego\107.png" />
+    <Resource Include="imagenesGeneralJuego\108.png" />
+    <Resource Include="imagenesGeneralJuego\109.png" />
+    <Resource Include="imagenesGeneralJuego\11.png" />
+    <Resource Include="imagenesGeneralJuego\110.png" />
+    <Resource Include="imagenesGeneralJuego\111.png" />
+    <Resource Include="imagenesGeneralJuego\112.png" />
+    <Resource Include="imagenesGeneralJuego\113.png" />
+    <Resource Include="imagenesGeneralJuego\114.png" />
+    <Resource Include="imagenesGeneralJuego\115.png" />
+    <Resource Include="imagenesGeneralJuego\116.png" />
+    <Resource Include="imagenesGeneralJuego\117.png" />
+    <Resource Include="imagenesGeneralJuego\118.png" />
+    <Resource Include="imagenesGeneralJuego\119.png" />
+    <Resource Include="imagenesGeneralJuego\12.png" />
+    <Resource Include="imagenesGeneralJuego\120.png" />
+    <Resource Include="imagenesGeneralJuego\121.png" />
+    <Resource Include="imagenesGeneralJuego\122.png" />
+    <Resource Include="imagenesGeneralJuego\123.png" />
+    <Resource Include="imagenesGeneralJuego\124.png" />
+    <Resource Include="imagenesGeneralJuego\125.png" />
+    <Resource Include="imagenesGeneralJuego\126.png" />
+    <Resource Include="imagenesGeneralJuego\127.png" />
+    <Resource Include="imagenesGeneralJuego\128.png" />
+    <Resource Include="imagenesGeneralJuego\129.png" />
+    <Resource Include="imagenesGeneralJuego\13.png" />
+    <Resource Include="imagenesGeneralJuego\130.png" />
+    <Resource Include="imagenesGeneralJuego\131.png" />
+    <Resource Include="imagenesGeneralJuego\132.png" />
+    <Resource Include="imagenesGeneralJuego\133.png" />
+    <Resource Include="imagenesGeneralJuego\134.png" />
+    <Resource Include="imagenesGeneralJuego\135.png" />
+    <Resource Include="imagenesGeneralJuego\136.png" />
+    <Resource Include="imagenesGeneralJuego\137.png" />
+    <Resource Include="imagenesGeneralJuego\138.png" />
+    <Resource Include="imagenesGeneralJuego\139.png" />
+    <Resource Include="imagenesGeneralJuego\14.png" />
+    <Resource Include="imagenesGeneralJuego\140.png" />
+    <Resource Include="imagenesGeneralJuego\141.png" />
+    <Resource Include="imagenesGeneralJuego\142.png" />
+    <Resource Include="imagenesGeneralJuego\143.png" />
+    <Resource Include="imagenesGeneralJuego\144.png" />
+    <Resource Include="imagenesGeneralJuego\145.png" />
+    <Resource Include="imagenesGeneralJuego\146.png" />
+    <Resource Include="imagenesGeneralJuego\147.png" />
+    <Resource Include="imagenesGeneralJuego\148.png" />
+    <Resource Include="imagenesGeneralJuego\149.png" />
+    <Resource Include="imagenesGeneralJuego\15.png" />
+    <Resource Include="imagenesGeneralJuego\150.png" />
+    <Resource Include="imagenesGeneralJuego\151.png" />
+    <Resource Include="imagenesGeneralJuego\152.png" />
+    <Resource Include="imagenesGeneralJuego\153.png" />
+    <Resource Include="imagenesGeneralJuego\154.png" />
+    <Resource Include="imagenesGeneralJuego\155.png" />
+    <Resource Include="imagenesGeneralJuego\156.png" />
+    <Resource Include="imagenesGeneralJuego\157.png" />
+    <Resource Include="imagenesGeneralJuego\158.png" />
+    <Resource Include="imagenesGeneralJuego\159.png" />
+    <Resource Include="imagenesGeneralJuego\16.png" />
+    <Resource Include="imagenesGeneralJuego\160.png" />
+    <Resource Include="imagenesGeneralJuego\161.png" />
+    <Resource Include="imagenesGeneralJuego\162.png" />
+    <Resource Include="imagenesGeneralJuego\163.png" />
+    <Resource Include="imagenesGeneralJuego\164.png" />
+    <Resource Include="imagenesGeneralJuego\165.png" />
+    <Resource Include="imagenesGeneralJuego\166.png" />
+    <Resource Include="imagenesGeneralJuego\167.png" />
+    <Resource Include="imagenesGeneralJuego\168.png" />
+    <Resource Include="imagenesGeneralJuego\169.png" />
+    <Resource Include="imagenesGeneralJuego\17.png" />
+    <Resource Include="imagenesGeneralJuego\170.png" />
+    <Resource Include="imagenesGeneralJuego\171.png" />
+    <Resource Include="imagenesGeneralJuego\172.png" />
+    <Resource Include="imagenesGeneralJuego\173.png" />
+    <Resource Include="imagenesGeneralJuego\174.png" />
+    <Resource Include="imagenesGeneralJuego\175.png" />
+    <Resource Include="imagenesGeneralJuego\176.png" />
+    <Resource Include="imagenesGeneralJuego\177.png" />
+    <Resource Include="imagenesGeneralJuego\178.png" />
+    <Resource Include="imagenesGeneralJuego\179.png" />
+    <Resource Include="imagenesGeneralJuego\18.png" />
+    <Resource Include="imagenesGeneralJuego\180.png" />
+    <Resource Include="imagenesGeneralJuego\181.png" />
+    <Resource Include="imagenesGeneralJuego\182.png" />
+    <Resource Include="imagenesGeneralJuego\183.png" />
+    <Resource Include="imagenesGeneralJuego\184.png" />
+    <Resource Include="imagenesGeneralJuego\185.png" />
+    <Resource Include="imagenesGeneralJuego\186.png" />
+    <Resource Include="imagenesGeneralJuego\187.png" />
+    <Resource Include="imagenesGeneralJuego\188.png" />
+    <Resource Include="imagenesGeneralJuego\189.png" />
+    <Resource Include="imagenesGeneralJuego\19.png" />
+    <Resource Include="imagenesGeneralJuego\190.png" />
+    <Resource Include="imagenesGeneralJuego\191.png" />
+    <Resource Include="imagenesGeneralJuego\192.png" />
+    <Resource Include="imagenesGeneralJuego\193.png" />
+    <Resource Include="imagenesGeneralJuego\194.png" />
+    <Resource Include="imagenesGeneralJuego\195.png" />
+    <Resource Include="imagenesGeneralJuego\196.png" />
+    <Resource Include="imagenesGeneralJuego\197.png" />
+    <Resource Include="imagenesGeneralJuego\198.png" />
+    <Resource Include="imagenesGeneralJuego\199.png" />
+    <Resource Include="imagenesGeneralJuego\2.png" />
+    <Resource Include="imagenesGeneralJuego\20.png" />
+    <Resource Include="imagenesGeneralJuego\200.png" />
+    <Resource Include="imagenesGeneralJuego\201.png" />
+    <Resource Include="imagenesGeneralJuego\202.png" />
+    <Resource Include="imagenesGeneralJuego\203.png" />
+    <Resource Include="imagenesGeneralJuego\204.png" />
+    <Resource Include="imagenesGeneralJuego\205.png" />
+    <Resource Include="imagenesGeneralJuego\206.png" />
+    <Resource Include="imagenesGeneralJuego\207.png" />
+    <Resource Include="imagenesGeneralJuego\208.png" />
+    <Resource Include="imagenesGeneralJuego\209.png" />
+    <Resource Include="imagenesGeneralJuego\21.png" />
+    <Resource Include="imagenesGeneralJuego\210.png" />
+    <Resource Include="imagenesGeneralJuego\211.png" />
+    <Resource Include="imagenesGeneralJuego\212.png" />
+    <Resource Include="imagenesGeneralJuego\213.png" />
+    <Resource Include="imagenesGeneralJuego\214.png" />
+    <Resource Include="imagenesGeneralJuego\215.png" />
+    <Resource Include="imagenesGeneralJuego\216.png" />
+    <Resource Include="imagenesGeneralJuego\217.png" />
+    <Resource Include="imagenesGeneralJuego\218.png" />
+    <Resource Include="imagenesGeneralJuego\219.png" />
+    <Resource Include="imagenesGeneralJuego\22.png" />
+    <Resource Include="imagenesGeneralJuego\220.png" />
+    <Resource Include="imagenesGeneralJuego\221.png" />
+    <Resource Include="imagenesGeneralJuego\222.png" />
+    <Resource Include="imagenesGeneralJuego\223.png" />
+    <Resource Include="imagenesGeneralJuego\224.png" />
+    <Resource Include="imagenesGeneralJuego\225.png" />
+    <Resource Include="imagenesGeneralJuego\226.png" />
+    <Resource Include="imagenesGeneralJuego\227.png" />
+    <Resource Include="imagenesGeneralJuego\228.png" />
+    <Resource Include="imagenesGeneralJuego\229.png" />
+    <Resource Include="imagenesGeneralJuego\23.png" />
+    <Resource Include="imagenesGeneralJuego\230.png" />
+    <Resource Include="imagenesGeneralJuego\231.png" />
+    <Resource Include="imagenesGeneralJuego\232.png" />
+    <Resource Include="imagenesGeneralJuego\233.png" />
+    <Resource Include="imagenesGeneralJuego\234.png" />
+    <Resource Include="imagenesGeneralJuego\235.png" />
+    <Resource Include="imagenesGeneralJuego\236.png" />
+    <Resource Include="imagenesGeneralJuego\237.png" />
+    <Resource Include="imagenesGeneralJuego\238.png" />
+    <Resource Include="imagenesGeneralJuego\239.png" />
+    <Resource Include="imagenesGeneralJuego\24.png" />
+    <Resource Include="imagenesGeneralJuego\240.png" />
+    <Resource Include="imagenesGeneralJuego\241.png" />
+    <Resource Include="imagenesGeneralJuego\242.png" />
+    <Resource Include="imagenesGeneralJuego\243.png" />
+    <Resource Include="imagenesGeneralJuego\244.png" />
+    <Resource Include="imagenesGeneralJuego\245.png" />
+    <Resource Include="imagenesGeneralJuego\246.png" />
+    <Resource Include="imagenesGeneralJuego\247.png" />
+    <Resource Include="imagenesGeneralJuego\248.png" />
+    <Resource Include="imagenesGeneralJuego\249.png" />
+    <Resource Include="imagenesGeneralJuego\25.png" />
+    <Resource Include="imagenesGeneralJuego\250.png" />
+    <Resource Include="imagenesGeneralJuego\251.png" />
+    <Resource Include="imagenesGeneralJuego\252.png" />
+    <Resource Include="imagenesGeneralJuego\253.png" />
+    <Resource Include="imagenesGeneralJuego\254.png" />
+    <Resource Include="imagenesGeneralJuego\255.png" />
+    <Resource Include="imagenesGeneralJuego\256.png" />
+    <Resource Include="imagenesGeneralJuego\257.png" />
+    <Resource Include="imagenesGeneralJuego\258.png" />
+    <Resource Include="imagenesGeneralJuego\259.png" />
+    <Resource Include="imagenesGeneralJuego\26.png" />
+    <Resource Include="imagenesGeneralJuego\260.png" />
+    <Resource Include="imagenesGeneralJuego\261.png" />
+    <Resource Include="imagenesGeneralJuego\262.png" />
+    <Resource Include="imagenesGeneralJuego\263.png" />
+    <Resource Include="imagenesGeneralJuego\264.png" />
+    <Resource Include="imagenesGeneralJuego\265.png" />
+    <Resource Include="imagenesGeneralJuego\266.png" />
+    <Resource Include="imagenesGeneralJuego\267.png" />
+    <Resource Include="imagenesGeneralJuego\268.png" />
+    <Resource Include="imagenesGeneralJuego\269.png" />
+    <Resource Include="imagenesGeneralJuego\27.png" />
+    <Resource Include="imagenesGeneralJuego\270.png" />
+    <Resource Include="imagenesGeneralJuego\271.png" />
+    <Resource Include="imagenesGeneralJuego\272.png" />
+    <Resource Include="imagenesGeneralJuego\273.png" />
+    <Resource Include="imagenesGeneralJuego\274.png" />
+    <Resource Include="imagenesGeneralJuego\275.png" />
+    <Resource Include="imagenesGeneralJuego\276.png" />
+    <Resource Include="imagenesGeneralJuego\277.png" />
+    <Resource Include="imagenesGeneralJuego\278.png" />
+    <Resource Include="imagenesGeneralJuego\279.png" />
+    <Resource Include="imagenesGeneralJuego\28.png" />
+    <Resource Include="imagenesGeneralJuego\280.png" />
+    <Resource Include="imagenesGeneralJuego\281.png" />
+    <Resource Include="imagenesGeneralJuego\282.png" />
+    <Resource Include="imagenesGeneralJuego\283.png" />
+    <Resource Include="imagenesGeneralJuego\284.png" />
+    <Resource Include="imagenesGeneralJuego\285.png" />
+    <Resource Include="imagenesGeneralJuego\286.png" />
+    <Resource Include="imagenesGeneralJuego\287.png" />
+    <Resource Include="imagenesGeneralJuego\288.png" />
+    <Resource Include="imagenesGeneralJuego\289.png" />
+    <Resource Include="imagenesGeneralJuego\29.png" />
+    <Resource Include="imagenesGeneralJuego\290.png" />
+    <Resource Include="imagenesGeneralJuego\291.png" />
+    <Resource Include="imagenesGeneralJuego\292.png" />
+    <Resource Include="imagenesGeneralJuego\293.png" />
+    <Resource Include="imagenesGeneralJuego\294.png" />
+    <Resource Include="imagenesGeneralJuego\295.png" />
+    <Resource Include="imagenesGeneralJuego\296.png" />
+    <Resource Include="imagenesGeneralJuego\297.png" />
+    <Resource Include="imagenesGeneralJuego\298.png" />
+    <Resource Include="imagenesGeneralJuego\299.png" />
+    <Resource Include="imagenesGeneralJuego\3.png" />
+    <Resource Include="imagenesGeneralJuego\30.png" />
+    <Resource Include="imagenesGeneralJuego\300.png" />
+    <Resource Include="imagenesGeneralJuego\301.png" />
+    <Resource Include="imagenesGeneralJuego\302.png" />
+    <Resource Include="imagenesGeneralJuego\303.png" />
+    <Resource Include="imagenesGeneralJuego\304.png" />
+    <Resource Include="imagenesGeneralJuego\305.png" />
+    <Resource Include="imagenesGeneralJuego\306.png" />
+    <Resource Include="imagenesGeneralJuego\307.png" />
+    <Resource Include="imagenesGeneralJuego\308.png" />
+    <Resource Include="imagenesGeneralJuego\309.png" />
+    <Resource Include="imagenesGeneralJuego\31.png" />
+    <Resource Include="imagenesGeneralJuego\310.png" />
+    <Resource Include="imagenesGeneralJuego\311.png" />
+    <Resource Include="imagenesGeneralJuego\312.png" />
+    <Resource Include="imagenesGeneralJuego\313.png" />
+    <Resource Include="imagenesGeneralJuego\314.png" />
+    <Resource Include="imagenesGeneralJuego\315.png" />
+    <Resource Include="imagenesGeneralJuego\316.png" />
+    <Resource Include="imagenesGeneralJuego\317.png" />
+    <Resource Include="imagenesGeneralJuego\318.png" />
+    <Resource Include="imagenesGeneralJuego\319.png" />
+    <Resource Include="imagenesGeneralJuego\32.png" />
+    <Resource Include="imagenesGeneralJuego\320.png" />
+    <Resource Include="imagenesGeneralJuego\321.png" />
+    <Resource Include="imagenesGeneralJuego\322.png" />
+    <Resource Include="imagenesGeneralJuego\323.png" />
+    <Resource Include="imagenesGeneralJuego\324.png" />
+    <Resource Include="imagenesGeneralJuego\325.png" />
+    <Resource Include="imagenesGeneralJuego\326.png" />
+    <Resource Include="imagenesGeneralJuego\327.png" />
+    <Resource Include="imagenesGeneralJuego\328.png" />
+    <Resource Include="imagenesGeneralJuego\329.png" />
+    <Resource Include="imagenesGeneralJuego\33.png" />
+    <Resource Include="imagenesGeneralJuego\330.png" />
+    <Resource Include="imagenesGeneralJuego\331.png" />
+    <Resource Include="imagenesGeneralJuego\332.png" />
+    <Resource Include="imagenesGeneralJuego\333.png" />
+    <Resource Include="imagenesGeneralJuego\334.png" />
+    <Resource Include="imagenesGeneralJuego\335.png" />
+    <Resource Include="imagenesGeneralJuego\336.png" />
+    <Resource Include="imagenesGeneralJuego\337.png" />
+    <Resource Include="imagenesGeneralJuego\338.png" />
+    <Resource Include="imagenesGeneralJuego\339.png" />
+    <Resource Include="imagenesGeneralJuego\34.png" />
+    <Resource Include="imagenesGeneralJuego\340.png" />
+    <Resource Include="imagenesGeneralJuego\341.png" />
+    <Resource Include="imagenesGeneralJuego\342.png" />
+    <Resource Include="imagenesGeneralJuego\343.png" />
+    <Resource Include="imagenesGeneralJuego\344.png" />
+    <Resource Include="imagenesGeneralJuego\345.png" />
+    <Resource Include="imagenesGeneralJuego\346.png" />
+    <Resource Include="imagenesGeneralJuego\347.png" />
+    <Resource Include="imagenesGeneralJuego\348.png" />
+    <Resource Include="imagenesGeneralJuego\349.png" />
+    <Resource Include="imagenesGeneralJuego\35.png" />
+    <Resource Include="imagenesGeneralJuego\350.png" />
+    <Resource Include="imagenesGeneralJuego\351.png" />
+    <Resource Include="imagenesGeneralJuego\352.png" />
+    <Resource Include="imagenesGeneralJuego\353.png" />
+    <Resource Include="imagenesGeneralJuego\354.png" />
+    <Resource Include="imagenesGeneralJuego\355.png" />
+    <Resource Include="imagenesGeneralJuego\356.png" />
+    <Resource Include="imagenesGeneralJuego\357.png" />
+    <Resource Include="imagenesGeneralJuego\358.png" />
+    <Resource Include="imagenesGeneralJuego\359.png" />
+    <Resource Include="imagenesGeneralJuego\36.png" />
+    <Resource Include="imagenesGeneralJuego\360.png" />
+    <Resource Include="imagenesGeneralJuego\361.png" />
+    <Resource Include="imagenesGeneralJuego\362.png" />
+    <Resource Include="imagenesGeneralJuego\363.png" />
+    <Resource Include="imagenesGeneralJuego\364.png" />
+    <Resource Include="imagenesGeneralJuego\365.png" />
+    <Resource Include="imagenesGeneralJuego\366.png" />
+    <Resource Include="imagenesGeneralJuego\367.png" />
+    <Resource Include="imagenesGeneralJuego\368.png" />
+    <Resource Include="imagenesGeneralJuego\369.png" />
+    <Resource Include="imagenesGeneralJuego\37.png" />
+    <Resource Include="imagenesGeneralJuego\370.png" />
+    <Resource Include="imagenesGeneralJuego\371.png" />
+    <Resource Include="imagenesGeneralJuego\372.png" />
+    <Resource Include="imagenesGeneralJuego\373.png" />
+    <Resource Include="imagenesGeneralJuego\374.png" />
+    <Resource Include="imagenesGeneralJuego\375.png" />
+    <Resource Include="imagenesGeneralJuego\376.png" />
+    <Resource Include="imagenesGeneralJuego\377.png" />
+    <Resource Include="imagenesGeneralJuego\378.png" />
+    <Resource Include="imagenesGeneralJuego\379.png" />
+    <Resource Include="imagenesGeneralJuego\38.png" />
+    <Resource Include="imagenesGeneralJuego\380.png" />
+    <Resource Include="imagenesGeneralJuego\381.png" />
+    <Resource Include="imagenesGeneralJuego\382.png" />
+    <Resource Include="imagenesGeneralJuego\383.png" />
+    <Resource Include="imagenesGeneralJuego\384.png" />
+    <Resource Include="imagenesGeneralJuego\385.png" />
+    <Resource Include="imagenesGeneralJuego\386.png" />
+    <Resource Include="imagenesGeneralJuego\387.png" />
+    <Resource Include="imagenesGeneralJuego\388.png" />
+    <Resource Include="imagenesGeneralJuego\389.png" />
+    <Resource Include="imagenesGeneralJuego\39.png" />
+    <Resource Include="imagenesGeneralJuego\390.png" />
+    <Resource Include="imagenesGeneralJuego\391.png" />
+    <Resource Include="imagenesGeneralJuego\392.png" />
+    <Resource Include="imagenesGeneralJuego\393.png" />
+    <Resource Include="imagenesGeneralJuego\394.png" />
+    <Resource Include="imagenesGeneralJuego\395.png" />
+    <Resource Include="imagenesGeneralJuego\396.png" />
+    <Resource Include="imagenesGeneralJuego\397.png" />
+    <Resource Include="imagenesGeneralJuego\398.png" />
+    <Resource Include="imagenesGeneralJuego\399.png" />
+    <Resource Include="imagenesGeneralJuego\4.png" />
+    <Resource Include="imagenesGeneralJuego\40.png" />
+    <Resource Include="imagenesGeneralJuego\400.png" />
+    <Resource Include="imagenesGeneralJuego\401.png" />
+    <Resource Include="imagenesGeneralJuego\402.png" />
+    <Resource Include="imagenesGeneralJuego\403.png" />
+    <Resource Include="imagenesGeneralJuego\404.png" />
+    <Resource Include="imagenesGeneralJuego\405.png" />
+    <Resource Include="imagenesGeneralJuego\406.png" />
+    <Resource Include="imagenesGeneralJuego\407.png" />
+    <Resource Include="imagenesGeneralJuego\408.png" />
+    <Resource Include="imagenesGeneralJuego\409.png" />
+    <Resource Include="imagenesGeneralJuego\41.png" />
+    <Resource Include="imagenesGeneralJuego\410.png" />
+    <Resource Include="imagenesGeneralJuego\411.png" />
+    <Resource Include="imagenesGeneralJuego\412.png" />
+    <Resource Include="imagenesGeneralJuego\413.png" />
+    <Resource Include="imagenesGeneralJuego\414.png" />
+    <Resource Include="imagenesGeneralJuego\415.png" />
+    <Resource Include="imagenesGeneralJuego\416.png" />
+    <Resource Include="imagenesGeneralJuego\417.png" />
+    <Resource Include="imagenesGeneralJuego\418.png" />
+    <Resource Include="imagenesGeneralJuego\419.png" />
+    <Resource Include="imagenesGeneralJuego\42.png" />
+    <Resource Include="imagenesGeneralJuego\420.png" />
+    <Resource Include="imagenesGeneralJuego\421.png" />
+    <Resource Include="imagenesGeneralJuego\422.png" />
+    <Resource Include="imagenesGeneralJuego\423.png" />
+    <Resource Include="imagenesGeneralJuego\424.png" />
+    <Resource Include="imagenesGeneralJuego\425.png" />
+    <Resource Include="imagenesGeneralJuego\426.png" />
+    <Resource Include="imagenesGeneralJuego\427.png" />
+    <Resource Include="imagenesGeneralJuego\428.png" />
+    <Resource Include="imagenesGeneralJuego\429.png" />
+    <Resource Include="imagenesGeneralJuego\43.png" />
+    <Resource Include="imagenesGeneralJuego\430.png" />
+    <Resource Include="imagenesGeneralJuego\431.png" />
+    <Resource Include="imagenesGeneralJuego\432.png" />
+    <Resource Include="imagenesGeneralJuego\433.png" />
+    <Resource Include="imagenesGeneralJuego\434.png" />
+    <Resource Include="imagenesGeneralJuego\435.png" />
+    <Resource Include="imagenesGeneralJuego\436.png" />
+    <Resource Include="imagenesGeneralJuego\437.png" />
+    <Resource Include="imagenesGeneralJuego\438.png" />
+    <Resource Include="imagenesGeneralJuego\439.png" />
+    <Resource Include="imagenesGeneralJuego\44.png" />
+    <Resource Include="imagenesGeneralJuego\440.png" />
+    <Resource Include="imagenesGeneralJuego\441.png" />
+    <Resource Include="imagenesGeneralJuego\442.png" />
+    <Resource Include="imagenesGeneralJuego\443.png" />
+    <Resource Include="imagenesGeneralJuego\444.png" />
+    <Resource Include="imagenesGeneralJuego\445.png" />
+    <Resource Include="imagenesGeneralJuego\446.png" />
+    <Resource Include="imagenesGeneralJuego\447.png" />
+    <Resource Include="imagenesGeneralJuego\448.png" />
+    <Resource Include="imagenesGeneralJuego\449.png" />
+    <Resource Include="imagenesGeneralJuego\45.png" />
+    <Resource Include="imagenesGeneralJuego\450.png" />
+    <Resource Include="imagenesGeneralJuego\451.png" />
+    <Resource Include="imagenesGeneralJuego\452.png" />
+    <Resource Include="imagenesGeneralJuego\453.png" />
+    <Resource Include="imagenesGeneralJuego\454.png" />
+    <Resource Include="imagenesGeneralJuego\455.png" />
+    <Resource Include="imagenesGeneralJuego\456.png" />
+    <Resource Include="imagenesGeneralJuego\457.png" />
+    <Resource Include="imagenesGeneralJuego\458.png" />
+    <Resource Include="imagenesGeneralJuego\459.png" />
+    <Resource Include="imagenesGeneralJuego\46.png" />
+    <Resource Include="imagenesGeneralJuego\460.png" />
+    <Resource Include="imagenesGeneralJuego\461.png" />
+    <Resource Include="imagenesGeneralJuego\462.png" />
+    <Resource Include="imagenesGeneralJuego\463.png" />
+    <Resource Include="imagenesGeneralJuego\464.png" />
+    <Resource Include="imagenesGeneralJuego\465.png" />
+    <Resource Include="imagenesGeneralJuego\466.png" />
+    <Resource Include="imagenesGeneralJuego\467.png" />
+    <Resource Include="imagenesGeneralJuego\468.png" />
+    <Resource Include="imagenesGeneralJuego\469.png" />
+    <Resource Include="imagenesGeneralJuego\47.png" />
+    <Resource Include="imagenesGeneralJuego\470.png" />
+    <Resource Include="imagenesGeneralJuego\471.png" />
+    <Resource Include="imagenesGeneralJuego\472.png" />
+    <Resource Include="imagenesGeneralJuego\473.png" />
+    <Resource Include="imagenesGeneralJuego\474.png" />
+    <Resource Include="imagenesGeneralJuego\475.png" />
+    <Resource Include="imagenesGeneralJuego\476.png" />
+    <Resource Include="imagenesGeneralJuego\477.png" />
+    <Resource Include="imagenesGeneralJuego\478.png" />
+    <Resource Include="imagenesGeneralJuego\479.png" />
+    <Resource Include="imagenesGeneralJuego\48.png" />
+    <Resource Include="imagenesGeneralJuego\480.png" />
+    <Resource Include="imagenesGeneralJuego\481.png" />
+    <Resource Include="imagenesGeneralJuego\482.png" />
+    <Resource Include="imagenesGeneralJuego\483.png" />
+    <Resource Include="imagenesGeneralJuego\484.png" />
+    <Resource Include="imagenesGeneralJuego\485.png" />
+    <Resource Include="imagenesGeneralJuego\486.png" />
+    <Resource Include="imagenesGeneralJuego\487.png" />
+    <Resource Include="imagenesGeneralJuego\488.png" />
+    <Resource Include="imagenesGeneralJuego\489.png" />
+    <Resource Include="imagenesGeneralJuego\49.png" />
+    <Resource Include="imagenesGeneralJuego\490.png" />
+    <Resource Include="imagenesGeneralJuego\491.png" />
+    <Resource Include="imagenesGeneralJuego\492.png" />
+    <Resource Include="imagenesGeneralJuego\493.png" />
+    <Resource Include="imagenesGeneralJuego\5.png" />
+    <Resource Include="imagenesGeneralJuego\50.png" />
+    <Resource Include="imagenesGeneralJuego\51.png" />
+    <Resource Include="imagenesGeneralJuego\52.png" />
+    <Resource Include="imagenesGeneralJuego\53.png" />
+    <Resource Include="imagenesGeneralJuego\54.png" />
+    <Resource Include="imagenesGeneralJuego\55.png" />
+    <Resource Include="imagenesGeneralJuego\56.png" />
+    <Resource Include="imagenesGeneralJuego\57.png" />
+    <Resource Include="imagenesGeneralJuego\58.png" />
+    <Resource Include="imagenesGeneralJuego\59.png" />
+    <Resource Include="imagenesGeneralJuego\6.png" />
+    <Resource Include="imagenesGeneralJuego\60.png" />
+    <Resource Include="imagenesGeneralJuego\61.png" />
+    <Resource Include="imagenesGeneralJuego\62.png" />
+    <Resource Include="imagenesGeneralJuego\63.png" />
+    <Resource Include="imagenesGeneralJuego\64.png" />
+    <Resource Include="imagenesGeneralJuego\65.png" />
+    <Resource Include="imagenesGeneralJuego\66.png" />
+    <Resource Include="imagenesGeneralJuego\67.png" />
+    <Resource Include="imagenesGeneralJuego\68.png" />
+    <Resource Include="imagenesGeneralJuego\69.png" />
+    <Resource Include="imagenesGeneralJuego\7.png" />
+    <Resource Include="imagenesGeneralJuego\70.png" />
+    <Resource Include="imagenesGeneralJuego\71.png" />
+    <Resource Include="imagenesGeneralJuego\72.png" />
+    <Resource Include="imagenesGeneralJuego\73.png" />
+    <Resource Include="imagenesGeneralJuego\74.png" />
+    <Resource Include="imagenesGeneralJuego\75.png" />
+    <Resource Include="imagenesGeneralJuego\76.png" />
+    <Resource Include="imagenesGeneralJuego\77.png" />
+    <Resource Include="imagenesGeneralJuego\78.png" />
+    <Resource Include="imagenesGeneralJuego\79.png" />
+    <Resource Include="imagenesGeneralJuego\8.png" />
+    <Resource Include="imagenesGeneralJuego\80.png" />
+    <Resource Include="imagenesGeneralJuego\81.png" />
+    <Resource Include="imagenesGeneralJuego\82.png" />
+    <Resource Include="imagenesGeneralJuego\83.png" />
+    <Resource Include="imagenesGeneralJuego\84.png" />
+    <Resource Include="imagenesGeneralJuego\85.png" />
+    <Resource Include="imagenesGeneralJuego\86.png" />
+    <Resource Include="imagenesGeneralJuego\87.png" />
+    <Resource Include="imagenesGeneralJuego\88.png" />
+    <Resource Include="imagenesGeneralJuego\89.png" />
+    <Resource Include="imagenesGeneralJuego\9.png" />
+    <Resource Include="imagenesGeneralJuego\90.png" />
+    <Resource Include="imagenesGeneralJuego\91.png" />
+    <Resource Include="imagenesGeneralJuego\92.png" />
+    <Resource Include="imagenesGeneralJuego\93.png" />
+    <Resource Include="imagenesGeneralJuego\94.png" />
+    <Resource Include="imagenesGeneralJuego\95.png" />
+    <Resource Include="imagenesGeneralJuego\96.png" />
+    <Resource Include="imagenesGeneralJuego\97.png" />
+    <Resource Include="imagenesGeneralJuego\98.png" />
+    <Resource Include="imagenesGeneralJuego\99.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

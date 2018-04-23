@@ -1,0 +1,49 @@
+﻿<Window x:Class="WPF_MenuComandos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    
+    <Window.CommandBindings>
+        <CommandBinding Command="Open" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed"/>
+        <CommandBinding Command="Close" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_Executed_1"/>
+    </Window.CommandBindings>
+    
+    
+    <Grid>
+        <Menu HorizontalAlignment="Stretch" Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Archivo">
+                <MenuItem Header="Abrir" Command="Open"/>
+                <MenuItem Header="Cerrar" Command="Close"/>
+                <Separator/>
+                <MenuItem Header="Salir"/>
+            </MenuItem>
+            <MenuItem Header="Editar">
+                <MenuItem Header="Copiar"/>
+                <MenuItem Header="Cortar"/>
+                <Separator/>
+                <MenuItem Header="Pegar"/>
+            </MenuItem>
+        </Menu>
+        <ToolBar HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Margin="0,25,0,0">
+            <Button Command="Open">
+                <Image Source="3.png" ToolTip="Abrir fichero"/>
+            </Button>
+            <Button Command="Close">
+                <Image Source="6.png" ToolTip="Cerrar fichero"/>
+            </Button>
+            <Button>
+                <Image Source="9.png" ToolTip="Salir fichero"/>
+            </Button>
+            <Button>
+                <Image Source="25.png" ToolTip="No lo sé"/>
+            </Button>
+        </ToolBar>
+        
+        <StatusBar VerticalAlignment="Bottom" Height="30">
+            <Button Background="#FFC74242" Content="Enviar mensaje"/>
+            <Separator/>
+            <TextBlock Name="tbxMensaje" Text="Aqui se muestra la información de la ventana"/>
+
+        </StatusBar>
+    </Grid>
+</Window>
